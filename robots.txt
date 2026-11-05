@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jackie8410.github.io/philosophy-river/sitemap.xml
