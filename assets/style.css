@@ -222,6 +222,10 @@ figcaption { color: var(--muted); font-size: .8rem; padding-top: .42rem; }
 .book-card h3 { font-size: 1.14rem; color: var(--green); }
 .book-card p { font-size: .93rem; }
 .book-card .eyebrow { font-size: .69rem; }
+.wechat-shop-card { grid-template-columns: minmax(0, 1fr) min(54%, 12.5rem); align-items: center; align-content: center; gap: .75rem; }
+.wechat-shop-card p { margin-top: .3rem; }
+.wechat-shop-code { display: block; }
+.wechat-shop-code img { width: 100%; border-radius: 4px; }
 .topic-steps { display: grid; gap: .8rem; max-width: 790px; }
 .topic-steps > li { padding: .7rem .85rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); }
 .topic-steps h3 { margin-bottom: .3rem; }
@@ -242,6 +246,8 @@ figcaption { color: var(--muted); font-size: .8rem; padding-top: .42rem; }
   .filters .keyword { grid-column: 1 / -1; }
   .filters .quiet { justify-self: start; }
   .directory-grid, .person-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .wechat-shop-card { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .wechat-shop-code { width: min(100%, 12.5rem); }
 }
 @media (max-width: 760px) {
   .wrap { width: calc(100% - 32px); }
