@@ -1,0 +1,24 @@
+{
+  "name": "philosophy-river",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "import": "node scripts/import.ts",
+    "assets": "node scripts/assets.ts",
+    "build": "node scripts/build.ts",
+    "preview": "node scripts/serve.ts",
+    "dev": "node scripts/serve.ts --drafts",
+    "validate": "node scripts/validate.ts",
+    "test": "node --test tests/*.test.ts",
+    "editor": "node scripts/editor.ts",
+    "deploy": "node scripts/deploy.ts",
+    "backup": "node scripts/backup.ts backup",
+    "restore": "node scripts/backup.ts restore"
+  },
+  "dependencies": {
+    "markdown-it": "14.1.1",
+    "sharp": "0.34.5"
+  }
+}
