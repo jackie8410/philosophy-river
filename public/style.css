@@ -168,6 +168,9 @@ figcaption { color: var(--muted); font-size: .8rem; padding-top: .42rem; }
 .article-letter { display: grid; place-items: center; color: #f9f5e9; background: #365648; min-width: 38px; min-height: 42px; border-radius: 5px; font: 650 1.4rem/1 var(--display); }
 .concept-list, .route-steps { display: grid; gap: .55rem; }
 .concept-list li p { margin-top: .14rem; color: var(--muted); }
+.related-list { display: grid; gap: .5rem; padding: 0; list-style: none; }
+.related-list li { display: flex; align-items: baseline; flex-wrap: wrap; gap: .2rem .8rem; padding: .45rem 0; border-bottom: 1px solid var(--rule); }
+.related-list li span { color: var(--muted); font-size: .9rem; }
 .media { margin: .8rem 0 0; }
 .media-frame { display: grid; place-items: center; aspect-ratio: var(--frame-ratio, 16 / 9); border-radius: 7px; }
 .media-poster { position: absolute; inset: 0; }

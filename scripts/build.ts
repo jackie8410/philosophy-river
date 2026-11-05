@@ -6,7 +6,7 @@ import {
 } from './views.ts';
 import type { PageOptions } from './views.ts';
 import { BOOKS, TOPICS } from './catalog.ts';
-import { BASE, PRIVATE, ROOT, SITE, SITE_URL, assetName, currentPeople, edition, load } from './model.ts';
+import { PRIVATE, ROOT, SITE, SITE_URL, assetName, currentPeople, edition, load, mediaValid } from './model.ts';
 import type { Article, Person } from './model.ts';
 
 const draft = process.argv.includes('--drafts');
@@ -70,7 +70,7 @@ for (const person of people) {
     }
   }
   const media = person.media;
-  if (media?.display_state === 'video_ready') {
+  if (media?.display_state === 'video_ready' && mediaValid(media)) {
     for (const url of [media.video_url, media.captions_url]) {
       if (!url || !/^assets\/media\/[a-z0-9][a-z0-9._-]*\.(mp4|webm|vtt)$/i.test(url)) continue;
       const file = path.join(mediaFolder, path.basename(url));
@@ -103,7 +103,8 @@ for (const person of people) {
   page(personPage(person, people), { title: person.name, route, description: description(person.overview), share: art,
     active: 'thinkers/', crumbs: [['首页', ''], ['人物总览', 'thinkers/'], [person.name, route]],
     structured: [{ '@context': 'https://schema.org', '@type': 'Person', name: person.name,
-      url: canonical(route), alternateName: [person.originalName, ...person.aliases].filter(Boolean), image: art ? canonical(art.replace(BASE, '')) : undefined }],
+      url: canonical(route), alternateName: [person.originalName, ...person.aliases].filter(Boolean),
+      image: art ? new URL(art, SITE_URL).href : undefined }],
   });
 }
 for (const [[person, article], index] of pairs.map((pair, index) => [pair, index] as const)) {

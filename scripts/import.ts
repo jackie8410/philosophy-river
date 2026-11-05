@@ -151,7 +151,7 @@ for (const row of roster) {
     }
   }
   const overview = intro(articles.find(article => article.kind === 'A'));
-  const meta = extractMetadata(overview, name, slug);
+  const meta = extractMetadata(overview, name, slug, articles.find(article => article.kind === 'A')?.body);
   const topicIds = TOPICS.filter(topic => (topic.ids as readonly string[]).includes(id)).map(topic => topic.id);
   const poster = assets.find(asset => asset.slot === 'A1') || assets[0];
   people.push({ id, name, slug, batch, ...meta, overview, articles, assets, plan, topics: topicIds, featured: profile,

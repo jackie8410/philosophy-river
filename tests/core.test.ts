@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { era, parseYears } from '../scripts/catalog.ts';
+import { era, extractMetadata, parseYears } from '../scripts/catalog.ts';
 import { safeSource, mediaValid } from '../scripts/model.ts';
 import type { Article, Person } from '../scripts/model.ts';
 import { mediaPanel, renderArticleBody } from '../scripts/views.ts';
@@ -12,6 +12,9 @@ test('公元前、跨纪元、约数和未知独立处理', () => {
   assert.equal(parseYears('约公元前10年至公元30年').precision, 'approximate');
   assert.equal(parseYears('生卒年未知').birth, null);
   assert.equal(parseYears('0—68年').birth, null);
+  assert.equal(parseYears('约翰·杜威（1859—1952）').precision, 'source');
+  assert.equal(extractMetadata('庄子是先秦道家人物。', '庄子', 'zhuangzi',
+    '## 二、生平记事\n\n庄子约公元前369年至前286年，宋国蒙地人。').years.birth, -369);
   assert.equal(era(null), '年代待核实');
 });
 

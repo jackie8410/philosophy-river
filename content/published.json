@@ -483,10 +483,10 @@
         "mencius"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -372,
+        "death": -289,
+        "label": "约公元前372—前289 年",
+        "precision": "approximate"
       },
       "region": "东亚",
       "tradition": "儒学",
@@ -641,10 +641,10 @@
         "zhuangzi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -369,
+        "death": -286,
+        "label": "约公元前369—前286 年",
+        "precision": "approximate"
       },
       "region": "东亚",
       "tradition": "道家",
@@ -820,10 +820,10 @@
         "xunzi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -310,
+        "death": -238,
+        "label": "约公元前310—前238 年",
+        "precision": "approximate"
       },
       "region": "东亚",
       "tradition": "儒学",
@@ -1608,10 +1608,10 @@
         "pythagoras"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -570,
+        "death": -490,
+        "label": "约公元前570—前490 年",
+        "precision": "approximate"
       },
       "region": "欧洲",
       "tradition": "",
@@ -1924,10 +1924,10 @@
         "socrates"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -469,
+        "death": -399,
+        "label": "公元前469—前399 年",
+        "precision": "source"
       },
       "region": "",
       "tradition": "",
@@ -2240,10 +2240,10 @@
         "aristotle"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -384,
+        "death": -322,
+        "label": "公元前384—前322 年",
+        "precision": "source"
       },
       "region": "欧洲",
       "tradition": "",
@@ -2418,10 +2418,10 @@
         "epicurus"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -341,
+        "death": -270,
+        "label": "公元前341—前270 年",
+        "precision": "source"
       },
       "region": "欧洲",
       "tradition": "哲学",
@@ -2758,7 +2758,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "西亚及北非",
       "tradition": "",
       "overview": "耶稣是基督宗教思想和伦理传统的中心人物。写耶稣必须区分信仰宣认、福音书叙事和历史研究，不宜把宗教崇敬直接写成现代传记。",
       "articles": [
@@ -3070,7 +3070,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "西亚及北非",
       "tradition": "哲学",
       "overview": "奥古斯丁是古代晚期最具影响力的基督教哲学家之一。他的思想把个人内心、记忆、欲望、恩典、意志和历史秩序连接起来。",
       "articles": [
@@ -3694,7 +3694,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "南亚",
       "tradition": "哲学",
       "overview": "鸠摩罗什（Kumarajiva）不是以原创体系著称的哲学家，却是思想史上极重要的“转译者”。他把印度佛教的般若、中观和大乘经典带入汉语世界，使许多概念获得了后来汉传佛教能够持续使用的表达形式。",
       "articles": [
@@ -4465,10 +4465,10 @@
         "al kindi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 801,
+        "death": 873,
+        "label": "约801—873 年",
+        "precision": "approximate"
       },
       "region": "西亚及北非",
       "tradition": "哲学",
@@ -4621,10 +4621,10 @@
         "al farabi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 870,
+        "death": 950,
+        "label": "约870—950 年",
+        "precision": "approximate"
       },
       "region": "西亚及北非",
       "tradition": "宗教思想",
@@ -5874,7 +5874,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "托马斯·阿奎那是中世纪经院哲学的高峰人物。他把亚里士多德哲学、基督教神学和大学论辩方法整合为庞大体系。",
       "articles": [
@@ -6030,7 +6030,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "",
       "overview": "奥卡姆是中世纪晚期经院哲学转向的重要人物，以唯名论和“奥卡姆剃刀”闻名。",
       "articles": [
@@ -6362,7 +6362,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "西亚及北非",
       "tradition": "",
       "overview": "伊本·赫勒敦（Ibn Khaldun）是历史哲学、社会分析与王朝兴衰理论的重要奠基者。在《世界哲学与思想者长河》第三批中，伊本·赫勒敦处在“权威、主体、国家与科学方法的近代转折”这一大主题之内。理解此人，不能只抓住一个名词，而要放回马格里布王朝更替、城市文明与游牧力量交错、伊斯兰学术传统和政治实践相互牵连的历史环境。",
       "articles": [
@@ -6830,7 +6830,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "",
       "overview": "伊拉斯谟（Desiderius Erasmus）是北方文艺复兴人文主义、文本批判与温和改革精神的代表。在《世界哲学与思想者长河》第三批中，伊拉斯谟处在“权威、主体、国家与科学方法的近代转折”这一大主题之内。理解此人，不能只抓住一个名词，而要放回印刷术扩张、大学与修道院教育转型、宗教改革前夜和古典文本复兴的欧洲。",
       "articles": [
@@ -7142,7 +7142,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "蒙田（Michel de Montaigne）是现代怀疑精神、自我书写和经验哲学的重要开端。在《世界哲学与思想者长河》第三批中，蒙田处在“权威、主体、国家与科学方法的近代转折”这一大主题之内。理解此人，不能只抓住一个名词，而要放回文艺复兴古典复兴、宗教内战、法律政治实践和个人经验写作兴起的法国。",
       "articles": [
@@ -7318,7 +7318,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "",
       "overview": "弗朗西斯·培根（Francis Bacon）是近代经验主义、归纳方法和知识改造计划的重要奠基者。在《世界哲学与思想者长河》第三批中，弗朗西斯·培根处在“权威、主体、国家与科学方法的近代转折”这一大主题之内。理解此人，不能只抓住一个名词，而要放回伊丽莎白与詹姆斯一世时期英国国家建设、法律实践、自然哲学革新和技术应用扩张的时代。",
       "articles": [
@@ -7630,7 +7630,7 @@
         "label": "年代待核实",
         "precision": "unknown"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "",
       "overview": "笛卡尔（Rene Descartes）是近代哲学主体转向、理性主义和方法怀疑的标志性人物。在《世界哲学与思想者长河》第三批中，笛卡尔处在“权威、主体、国家与科学方法的近代转折”这一大主题之内。理解此人，不能只抓住一个名词，而要放回科学革命、宗教战争余波、数学方法兴起和经院哲学权威松动的欧洲近代早期。",
       "articles": [
@@ -7939,10 +7939,10 @@
       "years": {
         "birth": 1588,
         "death": 1679,
-        "label": "约1588—1679 年",
-        "precision": "approximate"
+        "label": "1588—1679 年",
+        "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "托马斯·霍布斯（Thomas Hobbes，1588—1679）是把内战经验转化为现代主权理论、社会契约论与政治秩序问题的关键思想家。其思想形成于英国内战、王权与议会冲突、宗教分裂以及机械论自然哲学兴起的十七世纪英国。理解托马斯·霍布斯，不能只记住若干标签，而应从一个具体问题进入：当彼此不信任的人必须共同生活时，政治秩序应建立在美德、同意、恐惧还是强制能力之上？",
       "articles": [
@@ -8252,7 +8252,7 @@
         "label": "1623—1662 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "布莱兹·帕斯卡尔（Blaise Pascal，1623—1662）是把数学、实验科学、宗教论争与人的有限处境并置起来的思想家。其思想形成于笛卡尔理性主义、概率计算、真空实验、詹森主义争论与法国宫廷社会交错的十七世纪法国。理解布莱兹·帕斯卡尔，不能只记住若干标签，而应从一个具体问题进入：当理性极其有力却不能包办人生时，人如何在证据有限、时间有限的条件下作出真正属于自己的选择？",
       "articles": [
@@ -8408,7 +8408,7 @@
         "label": "1632—1677 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "跨地区",
       "tradition": "哲学",
       "overview": "巴鲁赫·斯宾诺莎（Baruch Spinoza，1632—1677）是以实体一元论、情感分析和思想自由重构近代理性主义的激进哲学家。其思想形成于荷兰共和国商业扩张、宗教多元与冲突、笛卡尔主义传播和犹太侨民共同体并存的十七世纪。理解巴鲁赫·斯宾诺莎，不能只记住若干标签，而应从一个具体问题进入：如果人也是自然因果网络的一部分，自由还能否不是随心所欲，而是对自身处境获得更充分的理解？",
       "articles": [
@@ -8582,10 +8582,10 @@
       "years": {
         "birth": 1632,
         "death": 1704,
-        "label": "约1632—1704 年",
-        "precision": "approximate"
+        "label": "1632—1704 年",
+        "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "约翰·洛克（John Locke，1632—1704）是把经验论、个人同一性、自然权利与有限政府连接起来的近代思想家。其思想形成于英国内战余波、王政复辟、宗教宽容争论、光荣革命与殖民扩张交织的英国。理解约翰·洛克，不能只记住若干标签，而应从一个具体问题进入：个人凭什么保持同一并拥有权利，政府又在何种条件下获得和失去正当性？",
       "articles": [
@@ -8741,7 +8741,7 @@
         "label": "1642—1727 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "艾萨克·牛顿（Isaac Newton，1642—1727）是以数学、实验和精确推理重塑自然哲学，同时深度参与神学与炼金术研究的科学思想家。其思想形成于英国科学革命、皇家学会制度化、宗教争论、航海测量和国家财政技术发展的时代。理解艾萨克·牛顿，不能只记住若干标签，而应从一个具体问题进入：科学模型为何能够获得公共权威，又应如何区分可计算的规律、尚未知晓的机制和更广阔的形而上解释？",
       "articles": [
@@ -11429,7 +11429,7 @@
         "label": "1737—1809 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "哲学",
       "overview": "托马斯·潘恩（Thomas Paine，1737—1809）是把自然权利、共和革命、宗教批判和早期社会保障方案写成大众政治语言的跨大西洋思想家。其思想形成于美国独立、法国革命、印刷公共领域与工业化贫困问题同时扩大的十八世纪末。理解这位人物，可以从一个具体问题进入：普遍权利怎样从革命宣言进入可持续的民主制度与物质保障？",
       "articles": [
@@ -11894,8 +11894,8 @@
       "years": {
         "birth": 1748,
         "death": 1832,
-        "label": "约1748—1832 年",
-        "precision": "approximate"
+        "label": "1748—1832 年",
+        "precision": "source"
       },
       "region": "欧洲",
       "tradition": "哲学",
@@ -12206,8 +12206,8 @@
       "years": {
         "birth": 1762,
         "death": 1814,
-        "label": "约1762—1814 年",
-        "precision": "approximate"
+        "label": "1762—1814 年",
+        "precision": "source"
       },
       "region": "欧洲",
       "tradition": "哲学",
@@ -12677,7 +12677,7 @@
         "label": "1772—1833 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "跨地区",
       "tradition": "哲学",
       "overview": "拉贾·拉姆·莫汉·罗伊（Raja Rammohun Roy，1772—1833）是在孟加拉多语知识网络、宗教改革和殖民公共领域中推动女性权利、新闻自由与教育改革的思想家。其思想形成于东印度公司扩张、孟加拉知识复兴、波斯语—梵语—英语公共文化交汇的十八至十九世纪之交。理解这位人物，可以从一个具体问题进入：被殖民社会如何吸收外来知识、批判自身制度，同时不把改革权完全交给殖民统治者？",
       "articles": [
@@ -13448,8 +13448,8 @@
       "years": {
         "birth": 1806,
         "death": 1873,
-        "label": "约1806—1873 年",
-        "precision": "approximate"
+        "label": "1806—1873 年",
+        "precision": "source"
       },
       "region": "",
       "tradition": "哲学",
@@ -13935,8 +13935,8 @@
       "years": {
         "birth": 1818,
         "death": 1895,
-        "label": "约1818—1895 年",
-        "precision": "approximate"
+        "label": "1818—1895 年",
+        "precision": "source"
       },
       "region": "",
       "tradition": "哲学",
@@ -14094,7 +14094,7 @@
         "label": "1818—1883 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "社会与政治思想",
       "overview": "卡尔·马克思（Karl Marx，1818—1883）是从异化、历史生产关系和资本积累机制批判现代资本主义并探索集体解放的哲学家与政治经济学家。其思想形成于黑格尔哲学分化、欧洲革命、工业资本主义、工人运动、殖民扩张和世界市场形成的十九世纪。理解这位人物，可以从一个具体问题进入：人的共同生产能力为何在资本关系中转化为支配力量，改变制度需要怎样连接理论、组织与实践？",
       "articles": [
@@ -14248,7 +14248,7 @@
         "label": "约1797—1883 年",
         "precision": "approximate"
       },
-      "region": "",
+      "region": "欧洲",
       "tradition": "",
       "overview": "索杰纳·特鲁思（Sojourner Truth，约1797—1883）是从纽约奴隶制中自我解放，以诉讼、口述自传、宗教演说和组织行动连接废奴与女性权利的黑人思想者。其思想形成于美国北方渐进废奴、第二次宗教大觉醒、废奴运动和早期女性权利大会交织的十九世纪。理解这位人物，可以从一个具体问题进入：当一个人的语言被他人记录和改写时，她如何仍以行动、演说与公共形象夺回自身的政治主体性？",
       "articles": [
@@ -15022,7 +15022,7 @@
         "label": "1820—1891 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "南亚",
       "tradition": "",
       "overview": "伊什瓦尔·钱德拉·维迪亚萨加尔（Ishwar Chandra Vidyasagar，1820—1891）是以梵语学术、孟加拉语教育、女子学校和寡妇再婚论证推动殖民孟加拉社会改革的教育家。其思想形成于东印度公司统治、孟加拉知识复兴、殖民教育改革与宗教法争论的十九世纪。理解这位人物，可以从一个具体问题进入：改革者如何运用传统经典和殖民法律改变有害制度，同时避免替受影响者垄断发言？",
       "articles": [
@@ -15173,8 +15173,8 @@
       "years": {
         "birth": 1835,
         "death": 1901,
-        "label": "约1835—1901 年",
-        "precision": "approximate"
+        "label": "1835—1901 年",
+        "precision": "source"
       },
       "region": "东亚",
       "tradition": "哲学",
@@ -16433,8 +16433,8 @@
       "years": {
         "birth": 1856,
         "death": 1939,
-        "label": "约1856—1939 年",
-        "precision": "approximate"
+        "label": "1856—1939 年",
+        "precision": "source"
       },
       "region": "欧洲",
       "tradition": "",
@@ -17216,7 +17216,7 @@
         "label": "1861—1941 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "跨地区",
       "tradition": "哲学",
       "overview": "拉宾德拉纳特·泰戈尔（Rabindranath Tagore，1861—1941）是以文学、教育实验、世界主义和乡村重建批判机械民族主义与殖民文明的孟加拉思想家。其思想形成于英属印度民族运动、孟加拉文化复兴、全球帝国竞争、世界大战与跨文化教育发展的十九世纪末至二十世纪初。理解这位人物，可以从一个具体问题进入：反殖民自由如何超越国家权力竞争，转化为教育、文化关系和乡村生活中的人的完整发展？",
       "articles": [
@@ -17867,8 +17867,8 @@
       "years": {
         "birth": 1859,
         "death": 1952,
-        "label": "约1859—1952 年",
-        "precision": "approximate"
+        "label": "1859—1952 年",
+        "precision": "source"
       },
       "region": "美洲",
       "tradition": "哲学",
@@ -18378,7 +18378,7 @@
         "label": "1869—1940 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "跨地区",
       "tradition": "社会与政治思想",
       "overview": "艾玛·戈德曼（Emma Goldman，1869—1940）是把无政府主义、劳动解放、言论自由和性别自主结合起来的跨国政治思想家与组织者。其思想形成于俄国帝国反犹压迫、美国工业劳资冲突、无政府主义运动、第一次世界大战和俄国革命的时代。理解这位人物，可以从一个具体问题进入：自由如何超越国家许可和私人选择，成为人们共同反抗支配、发展身体与关系自主的实际能力？",
       "articles": [
@@ -21827,7 +21827,7 @@
         "label": "1885—1971 年",
         "precision": "source"
       },
-      "region": "",
+      "region": "西亚及北非",
       "tradition": "哲学",
       "overview": "捷尔吉·卢卡奇（György Lukács，1885—1971）是匈牙利的哲学家、文学批评家、马克思主义理论家与政治人物。其思想形成于奥匈帝国晚期文化危机、第一次世界大战、匈牙利革命、欧洲法西斯主义、苏联流亡、斯大林主义与1956年匈牙利事件的年代。理解这位人物，可以从一个具体问题进入：当劳动、教育、注意力和自我评价都被指标与商品形式切割时，如何看见关系总体并恢复参与者改变制度的能力？",
       "articles": [
@@ -23404,6 +23404,357 @@
       "at": "2026-11-05T07:12:54.238Z",
       "actor": "Codex",
       "note": "项目所有者授权使用源稿与配图上线。完成文件与图位结构校验。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "004",
+      "state": "published",
+      "version": "56d495cb89e830c2bfb91043c80a1440bbcc498127784dfc3d494de7f41aa8a9",
+      "at": "2026-11-05T10:22:14.322Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "005",
+      "state": "published",
+      "version": "8d2537843b6d5b038878a81d4d224ff0b5ff0cd0b4b24490d98b46f061bec910",
+      "at": "2026-11-05T10:22:14.327Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "006",
+      "state": "published",
+      "version": "a49222362652b0f815b78ca5c25fba88055cee09e653c553306ac1c4380bf627",
+      "at": "2026-11-05T10:22:14.330Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "011",
+      "state": "published",
+      "version": "c93dc4791951afa3463c3f00ac1fb9c8326a1ddc6c0757465851291fb9208457",
+      "at": "2026-11-05T10:22:14.333Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "013",
+      "state": "published",
+      "version": "b2c7761ebcef5900021b22bd763b4bd91cce998a522ca54b3d2f71e5a38a6750",
+      "at": "2026-11-05T10:22:14.335Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "015",
+      "state": "published",
+      "version": "b710ed2dc96e2a1e5a968d41d4174fb6528bac968eb554db418ddea21fb0481f",
+      "at": "2026-11-05T10:22:14.337Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "016",
+      "state": "published",
+      "version": "7c828ee6d24c0ac8f8ab20726f1a1ba074659826819a7e681e2ff81d69f6e2cf",
+      "at": "2026-11-05T10:22:14.340Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "018",
+      "state": "published",
+      "version": "f388138f3ebe63d8642da3220d8ee0ed765a80ec1825d2ca25e0da1ce4a05f8c",
+      "at": "2026-11-05T10:22:14.342Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "020",
+      "state": "published",
+      "version": "db07b9c2b42523aa99e0c7cfbf77754571b209dcb4d5107fd1cb08b16deba016",
+      "at": "2026-11-05T10:22:14.344Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "024",
+      "state": "published",
+      "version": "9dedf58ec76dba65e26d3b76f9483f5d9844c90c8c0462a6add6c21ea4ef6e3f",
+      "at": "2026-11-05T10:22:14.347Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "029",
+      "state": "published",
+      "version": "712df926b1db2daf98fd2a1fc2b3f56f0feb63a9df93ec2fcfe6300584b544a6",
+      "at": "2026-11-05T10:22:14.349Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "030",
+      "state": "published",
+      "version": "65b9d97dc5e2b0013585fd358e256b96ff16150301c0fb8f602383ad1adfb057",
+      "at": "2026-11-05T10:22:14.351Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "038",
+      "state": "published",
+      "version": "57eca30adbc001bf43aeba9730fc6b173ff274a42333ff19c0daf0c3d1299c41",
+      "at": "2026-11-05T10:22:14.353Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "039",
+      "state": "published",
+      "version": "6973b101a23a31337574604a0ebe9f23d38a4417fe234be657c01a16632807db",
+      "at": "2026-11-05T10:22:14.354Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "041",
+      "state": "published",
+      "version": "92dabf7817e287779f6168705e7c74f14dee86f5eeec31f44629bb89ba957e8b",
+      "at": "2026-11-05T10:22:14.356Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "044",
+      "state": "published",
+      "version": "55cb4b8bd247a15c0267ba6bd1473b2e21c2cf4f3735fad09f34f819b9d9d771",
+      "at": "2026-11-05T10:22:14.358Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "046",
+      "state": "published",
+      "version": "55415aa7d4cfa2f6047506e1d12b96ccfbe261d534c77ea47547424b3fa37652",
+      "at": "2026-11-05T10:22:14.359Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "047",
+      "state": "published",
+      "version": "790fdccabdafb47c4a5fa66b2359b3ec5e44edf6f92630f78c3477b6ab302e47",
+      "at": "2026-11-05T10:22:14.361Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "049",
+      "state": "published",
+      "version": "c7b6d7e4f362ade08a402ff79784c8c04494f07a21735120661586b418e2a8c5",
+      "at": "2026-11-05T10:22:14.363Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "051",
+      "state": "published",
+      "version": "9db2109b4b69784ae4a4a21939717f10b066c8f98cbdd8dce2425686a6b7c54e",
+      "at": "2026-11-05T10:22:14.365Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "053",
+      "state": "published",
+      "version": "e361fb355b8b433c8ec775969bce2c2613fef7d41ded21db7cd6022b199ca84f",
+      "at": "2026-11-05T10:22:14.367Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "054",
+      "state": "published",
+      "version": "bbabc5bb16a7ea4468aa2751a3a837d2db032c0db063336066d346ace8631a15",
+      "at": "2026-11-05T10:22:14.369Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "055",
+      "state": "published",
+      "version": "95c120504ca134b3d1c87a1732a2bce28895a37e1cc6f500d26a8ea74d5c76a9",
+      "at": "2026-11-05T10:22:14.370Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "056",
+      "state": "published",
+      "version": "4eb28c30fa18904181ff7fb8a3732409739ea48de9c52bcf6567f2a314c05042",
+      "at": "2026-11-05T10:22:14.372Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "073",
+      "state": "published",
+      "version": "468c7c266ecd77f8077e06a434fcb930d9bceaf3b53db9ec1c0e4e09907bd647",
+      "at": "2026-11-05T10:22:14.374Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "076",
+      "state": "published",
+      "version": "e322093f0237eeabfc6b71eabed466f966539315c686149b9a8631f19110ad30",
+      "at": "2026-11-05T10:22:14.376Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "078",
+      "state": "published",
+      "version": "e5f97835567ba14da5eb74e3a44b20b40c399ec72c0088076fca2b02cc38a7c9",
+      "at": "2026-11-05T10:22:14.379Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "081",
+      "state": "published",
+      "version": "b712ad0aa804ca09ee6501fb974792dabd1b940939e8ef53bf3f36860bd3da79",
+      "at": "2026-11-05T10:22:14.381Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "086",
+      "state": "published",
+      "version": "ef1bb08f3345f5630a02bb339e6d6c778e0f2cedd0c394744abb8740b0249274",
+      "at": "2026-11-05T10:22:14.383Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "089",
+      "state": "published",
+      "version": "c0e8a7fd3a8451a9625e85e27c7906c53de30ce0a64c71c1e580f7877d427dc6",
+      "at": "2026-11-05T10:22:14.385Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "090",
+      "state": "published",
+      "version": "267623967fbaa55027d7d1ce6e96879004009a723c86c70daa7a617aa369c8b6",
+      "at": "2026-11-05T10:22:14.386Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "091",
+      "state": "published",
+      "version": "549f66aa1f0b99f259add3f6ff2eaf6764f4e87f70bb0a7179bca1ae7190c75b",
+      "at": "2026-11-05T10:22:14.388Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "096",
+      "state": "published",
+      "version": "dd302724639213a307467807a837da6e04cd8c9e523271fdba6d53d50c140ffe",
+      "at": "2026-11-05T10:22:14.390Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "097",
+      "state": "published",
+      "version": "a1893140ae65f12eb75b98697aa937f997f933a6cc955669eaadcb34638e4901",
+      "at": "2026-11-05T10:22:14.392Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "105",
+      "state": "published",
+      "version": "77be1bd693728d3a9378984ef353251ad8bbf6a38e46ab6e0cb880c1ff0888e7",
+      "at": "2026-11-05T10:22:14.394Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "110",
+      "state": "published",
+      "version": "3865a9c017d150d762a262d328daa0aa38702e7f0b97e7deea509096b0bd4678",
+      "at": "2026-11-05T10:22:14.396Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "114",
+      "state": "published",
+      "version": "135d41096dc69bdd8217ac00e91b8d3783710bde07513ee83e6665880139339a",
+      "at": "2026-11-05T10:22:14.398Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "117",
+      "state": "published",
+      "version": "09648018bb954d8942ef69e3a94df6445a1cb545e9dfe2a8047adb8eda54fcae",
+      "at": "2026-11-05T10:22:14.400Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "139",
+      "state": "published",
+      "version": "16e19c20a8067ba0f58420358737b3c6e38d219b20bea78976906124c53f3170",
+      "at": "2026-11-05T10:22:14.403Z",
+      "actor": "Codex",
+      "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
       "review": "owner_authorized"
     }
   ]

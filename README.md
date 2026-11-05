@@ -49,7 +49,7 @@ npm run deploy
 
 `edit.json` 的 `fields` 可包含 `name`、`originalName`、`aliases`、`years`、`region`、`tradition`、`overview`、`topics`、`featured` 和 `media`。`articles.A` 或 `articles.B` 可设置 `title`、`body`。永久 ID 和已公开 slug 随版本保留。
 
-批量加入主题用 `editor topic --topic judgment --ids 005,065` 并带实际操作人与摘要。重导入后用 `editor diff 005` 查变更，已编辑版本继续保存在本地。接受源稿用 `editor accept-source 005 --kind A`。文章 B 可独立接受。
+批量加入主题用 `editor topic --topic judgment --ids 005,065` 并带实际操作人与摘要。重导入后用 `editor diff 005 --kind A` 查当前源稿和编辑覆盖层。接受全文用 `editor accept-source 005 --kind A`，只接受标题或正文时分别加 `--field title` 或 `--field body`。文章 B 可独立接受。
 
 撤回用 `editor withdraw 005 --actor … --note …`，然后导出公开图片、重建、验收及部署。验证旧路径的 HTTP 状态、站内搜索、推荐和站点地图。Git 历史保留曾经公开的版本，涉及彻底移除的情形由仓库管理员另行处理历史及缓存。
 

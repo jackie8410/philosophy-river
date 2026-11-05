@@ -2,20 +2,22 @@ import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { TOPICS } from './catalog.ts';
-import { EDITS, PRIVATE, PUBLISHED, currentPeople, digest, edition, load, mediaValid, save } from './model.ts';
+import { EDITS, INDEX, PRIVATE, PUBLISHED, applyEdit, digest, edition, load, mediaValid, save } from './model.ts';
 import type { ContentStatus, EditRecord, Person, PublicationRecord } from './model.ts';
 
 const { positionals, values } = parseArgs({
   allowPositionals: true,
   options: { actor: { type: 'string' }, note: { type: 'string' }, file: { type: 'string' },
-    kind: { type: 'string' }, topic: { type: 'string' }, ids: { type: 'string' },
+    kind: { type: 'string' }, field: { type: 'string' }, topic: { type: 'string' }, ids: { type: 'string' },
     'owner-authorized': { type: 'boolean' } },
 });
 const [command = 'status', id] = positionals;
-const people = currentPeople();
 const published = edition();
 const edits = load<Record<string, EditRecord>>(EDITS, {});
+const imported = load<Person[]>(INDEX, []);
+const people = imported.map(person => applyEdit(person, edits[person.id]));
 const selected = people.find(person => person.id === id);
+const raw = imported.find(person => person.id === id);
 const existing = (id: string) => edits[id] ??= { patch: {}, history: [] };
 const version = (person: Person) => digest(JSON.stringify(person));
 const snapshots = (id: string, hash: string) => path.join(PRIVATE, 'versions', id, hash + '.json');
@@ -66,8 +68,9 @@ switch (command) {
     const reportPath = path.join(PRIVATE, 'import-report.json');
     if (!existsSync(reportPath)) throw new Error('先运行 npm run import');
     const report = load<{ changes: { person: string; kind: string }[]; issues: unknown[] }>(reportPath, { changes: [], issues: [] });
+    const source = raw?.articles.filter(article => !values.kind || article.kind === values.kind);
     console.log(JSON.stringify(id ? { changes: report.changes.filter(change => change.person === id),
-      source: selected?.articles.map(({ kind, hash, source }) => ({ kind, hash, source })),
+      source: values.kind ? source : source?.map(({ kind, hash, source }) => ({ kind, hash, source })),
       overrides: edits[id]?.articles || {} } : { changes: report.changes, issues: report.issues }, null, 2));
     break;
   }
@@ -95,25 +98,36 @@ switch (command) {
     if (!next.name?.trim() || !Array.isArray(next.aliases) || !Array.isArray(next.topics) || !mediaValid(next.media)) {
       throw new Error('人物字段或媒体设置无效');
     }
-    const imported = load<Person[]>(path.join(PRIVATE, 'index.json'), []).find(person => person.id === selected.id);
     for (const kind of ['A', 'B'] as const) {
       const draft = change.articles?.[kind];
-      const source = imported?.articles.find(article => article.kind === kind);
+      const source = raw?.articles.find(article => article.kind === kind);
       if (draft && (!source || !draft.title?.trim() || !draft.body?.trim())) throw new Error('文章编辑缺少来源、标题或正文');
       if (draft && source) (entry.articles ??= {})[kind] = { ...draft, sourceHash: source.hash };
     }
     entry.patch = { ...entry.patch, ...change.fields };
-    append(next, 'draft');
+    append(applyEdit(raw!, entry), 'draft');
     finish();
     break;
   }
   case 'accept-source': {
     assertEditor();
     const kind = values.kind;
-    if (!selected || (kind !== 'A' && kind !== 'B')) throw new Error('请指定人物 ID 和 --kind A 或 B');
+    const field = values.field ?? 'all';
+    if (!selected || !raw || (kind !== 'A' && kind !== 'B') || (field !== 'all' && field !== 'title' && field !== 'body')) {
+      throw new Error('请指定人物 ID、--kind A 或 B 以及可选的 --field title、body 或 all');
+    }
     const entry = existing(selected.id);
-    if (entry.articles?.[kind]) delete entry.articles[kind];
-    append(selected, 'draft');
+    const change = entry.articles?.[kind];
+    const source = raw.articles.find(article => article.kind === kind);
+    if (!source) throw new Error('所选源稿当前缺失，请先补齐资料');
+    if (change) {
+      if (field === 'all') delete entry.articles![kind];
+      else {
+        change[field] = source[field];
+        if (change.body === source.body && change.title === source.title) delete entry.articles![kind];
+      }
+    }
+    append(applyEdit(raw, entry), 'draft');
     finish();
     break;
   }

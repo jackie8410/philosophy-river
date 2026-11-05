@@ -10,23 +10,22 @@ if (execFileSync(process.execPath, [path.join(ROOT, 'scripts', 'validate.ts')], 
 }
 mkdirSync(PRIVATE, { recursive: true });
 const index = path.join(PRIVATE, 'deploy-' + process.pid + '.index');
-const git = (args: string[], staging = false) => execFileSync('git', args, {
+const git = (args: string[], staging = false) => execFileSync('git', ['-c', 'core.safecrlf=false', ...args], {
   cwd: staging ? dist : ROOT, encoding: 'utf8', windowsHide: true,
   env: { ...process.env, ...(staging ? { GIT_INDEX_FILE: index } : {}) }, stdio: ['ignore', 'pipe', 'inherit'],
 }).trim();
 const gitDir = git(['rev-parse', '--absolute-git-dir']);
 const prefix = ['--git-dir=' + gitDir, '--work-tree=' + dist];
 const branch = 'refs/heads/gh-pages';
-const lookup = git(['for-each-ref', '--format=%(objectname)', branch]);
+const localHead = git(['for-each-ref', '--format=%(objectname)', branch]);
+const parent = localHead || git(['for-each-ref', '--format=%(objectname)', 'refs/remotes/origin/gh-pages']);
 try {
   git([...prefix, 'read-tree', '--empty'], true);
   git([...prefix, 'add', '-f', '--all', '.'], true);
   const tree = git([...prefix, 'write-tree'], true);
-  const parentTree = lookup ? git(['rev-parse', lookup + '^{tree}']) : '';
-  if (parentTree !== tree) {
-    const next = git(['commit-tree', tree, ...(lookup ? ['-p', lookup] : []), '-m', 'Publish verified static site']);
-    git(['update-ref', branch, next, lookup || '0'.repeat(40)]);
-  }
+  const parentTree = parent ? git(['rev-parse', parent + '^{tree}']) : '';
+  const next = parentTree === tree ? parent : git(['commit-tree', tree, ...(parent ? ['-p', parent] : []), '-m', 'Publish verified static site']);
+  if (localHead !== next) git(['update-ref', branch, next, localHead || '0'.repeat(40)]);
   if (!process.argv.includes('--local')) git(['push', 'origin', 'gh-pages']);
   console.log('gh-pages ' + git(['rev-parse', branch]));
 } finally {

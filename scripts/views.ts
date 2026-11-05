@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import { BASE, REPO, SITE, SITE_URL, assetName, mediaValid } from './model.ts';
-import type { Article, Asset, Person, Source } from './model.ts';
+import type { Article, Asset, Person, Relationship, Source } from './model.ts';
 import { BOOKS, ERAS, TOPICS, era } from './catalog.ts';
 
 export const link = (route = '') => BASE + route.replace(/^\/+/, '');
@@ -171,6 +171,7 @@ export function directory(people: Person[], search = false) {
   return `<div class="wrap page">${head}
 ${!search ? `<div class="inline-callout"><div><strong>重点人物 · 深度阅读</strong><p>循导读、概念、思想脉络和原典继续阅读。</p></div>${button('进入重点人物', link('thinkers/featured/'), true)}</div>` : ''}
 <section class="catalog" data-catalog data-search-page="${String(search)}" aria-label="人物检索">
+<h2 class="sr-only">匹配人物</h2>
 <form class="filters" data-filters><label class="keyword">${searchIcon}<span class="sr-only">关键词</span><input name="q" data-query type="search" placeholder="例：庄子、Hume、知行合一"></label>
 ${select('era', '时代', pairs(ERAS))}${select('region', '地区', pairs(people.map(person => person.region || '待核实').sort()))}
 ${select('tradition', '传统', pairs(people.map(person => person.tradition || '待核实').sort()))}
@@ -188,6 +189,7 @@ export function featuredDirectory(people: Person[]) {
   return `<div class="wrap page">${heading('重点人物', '从概念、作品和现实问题进入。每位人物使用与完整名录相同的详情页。', '深度阅读')}
 <a class="text-link" href="${link('thinkers/')}">← 返回完整人物总览</a>
 <div class="chip-row">${TOPICS.map(topic => `<a class="chip" href="${link(topicRoute(topic.id))}">${e(topic.short)}</a>`).join('')}</div>
+<h2 class="sr-only">重点人物列表</h2>
 <div class="grid person-grid">${featureOrder(people).map(person => card(person, false, true)).join('')}</div></div>`;
 }
 
@@ -348,11 +350,22 @@ ${feature.sections?.map(section => `<section class="module"><h2>${e(section.titl
 }
 
 export function personPage(person: Person, people: Person[]) {
-  const related = people.filter(other => other.id !== person.id && person.topics.some(topic => other.topics.includes(topic))).slice(0, 4);
+  const available = people.filter(other => other.id !== person.id);
+  const related = available.flatMap(other => {
+    const common = TOPICS.find(topic => person.topics.includes(topic.id) && other.topics.includes(topic.id));
+    if (common) return [{ other, reason: '同列“' + common.name + '”主题' }];
+    if (person.region && person.tradition && other.region === person.region && other.tradition === person.tradition) {
+      return [{ other, reason: '可从相同地区和传统比较各自的问题与语境' }];
+    }
+    return [];
+  }).sort((a, b) => Number(b.reason.startsWith('同列')) - Number(a.reason.startsWith('同列'))).slice(0, 4)
+    .map(({ other, reason }) => ({ other, relation: { from: person.id, to: other.id, kind: 'editorial_comparison', reason } as Relationship }));
   const references = [...new Map(person.articles.flatMap(article => article.sources).map(source => [source.url || source.title, source])).values()];
   const art = person.assets.find(asset => asset.slot === 'A1');
+  const aliases = person.aliases.filter(alias => alias.toLowerCase() !== person.originalName.toLowerCase());
   return `<div class="wrap page"><section class="profile-head"><div class="profile-intro"><div class="eyebrow">人物 NO. ${person.id} ${person.featured ? ' · 重点人物' : ''}</div>
 <h1>${e(person.name)}</h1>${person.originalName ? `<p class="original-name" lang="en">${e(person.originalName)}</p>` : ''}
+${aliases.length ? `<p class="muted">检索别名 ${e(aliases.join(' · '))}</p>` : ''}
 <p class="profile-date">${e(person.years.label)}${person.region ? ' · ' + e(person.region) : ''}${person.tradition ? ' · ' + e(person.tradition) : ''}</p>
 <p class="lede">${e(excerpt(person.overview, 230))}</p><div class="actions">${bookmark('person-' + person.id, person.name, personRoute(person))}${correction(person.name, personRoute(person))}</div>
 </div><figure class="profile-figure"><div class="picture"><span class="picture-placeholder" aria-hidden="true">${e(person.name)}</span>${art ? image(person, art, true) : ''}</div><figcaption>${e(person.name)} · 人物主题插图</figcaption></figure></section>
@@ -367,7 +380,8 @@ ${person.topics.length ? `<div class="chip-row">${person.topics.map(id => {
     const topic = TOPICS.find(topic => topic.id === id);
     return topic ? `<a class="chip" href="${link(topicRoute(id))}">${e(topic.name)}</a>` : '';
   }).join('')}</div>` : ''}</section>
-${related.length ? `<section class="module"><h2>相关人物</h2><p>这些人物与本页共享阅读主题，适合做观点比较。</p><div class="grid two">${related.map(other => card(other)).join('')}</div></section>` : ''}
+${related.length ? `<section class="module"><h2>相关人物</h2><p>以下为编辑比较，可沿共享主题、地区和思想传统继续阅读。</p><ul class="related-list">${related.map(({ other, relation }) =>
+    `<li><a href="${link(personRoute(other))}">${e(other.name)} ${right}</a><span>${e(relation.reason)}</span></li>`).join('')}</ul></section>` : ''}
 </div></div>`;
 }
 
@@ -398,6 +412,7 @@ ${ad ? '<div class="ad-slot" data-ad-slot hidden aria-label="广告"></div>' : '
 
 export function topics() {
   return `<div class="wrap page">${heading('带着问题读', '从五个现实问题出发，沿着人物、两类文章和原典建立自己的阅读顺序。', '主题总览')}
+<h2 class="sr-only">首发主题</h2>
 <div class="topic-grid">${topicCards()}</div></div>`;
 }
 

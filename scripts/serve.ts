@@ -22,9 +22,12 @@ if (drafts || !existsSync(output)) {
   if (result.status !== 0) process.exit(result.status ?? 1);
 }
 const root = realpathSync(output);
-const same = (value: string | undefined) => Boolean(value && value.length === secret.length &&
-  timingSafeEqual(Buffer.from(value), Buffer.from(secret)));
-createServer((req, res) => {
+const expected = Buffer.from(secret);
+function same(value: string | undefined) {
+  const candidate = Buffer.from(value || '');
+  return candidate.length === expected.length && timingSafeEqual(candidate, expected);
+}
+const server = createServer((req, res) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Referrer-Policy', 'no-referrer');
   if (drafts) {
@@ -79,5 +82,7 @@ createServer((req, res) => {
   if (req.method === 'HEAD') res.end();
   else createReadStream(file).pipe(res);
 }).listen(port, host, () => {
-  console.log('Local: http://' + host + ':' + port + (drafts ? login + secret : BASE));
+  const bound = server.address();
+  if (!bound || typeof bound === 'string') throw new Error('本地预览无法分配端口');
+  console.log('Local: http://' + host + ':' + bound.port + (drafts ? login + secret : BASE));
 });

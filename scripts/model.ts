@@ -97,6 +97,13 @@ export interface Edition {
   people: Person[];
   records: PublicationRecord[];
 }
+export interface Relationship {
+  from: string;
+  to: string;
+  kind: 'editorial_comparison' | 'documented_influence';
+  reason: string;
+  evidence?: Source;
+}
 export interface EditRecord {
   patch: Partial<Pick<Person, 'name' | 'originalName' | 'aliases' | 'years' | 'region' | 'tradition' | 'overview' | 'topics' | 'featured' | 'media'>>;
   articles?: Partial<Record<Article['kind'], Pick<Article, 'title' | 'body'> & { sourceHash: string }>>;
@@ -128,21 +135,22 @@ export function safeSource(relative: string): string {
   return result;
 }
 
+export function applyEdit(person: Person, edit?: EditRecord): Person {
+  if (!edit) return person;
+  return {
+    ...person,
+    ...edit.patch,
+    articles: person.articles.map(article => {
+      const revision = edit.articles?.[article.kind];
+      return revision ? { ...article, title: revision.title, body: revision.body, sources: readSources(revision.body) } : article;
+    }),
+  };
+}
+
 export function currentPeople(): Person[] {
   const imported = load<Person[]>(INDEX, []);
   const edits = load<Record<string, EditRecord>>(EDITS, {});
-  return imported.map(person => {
-    const edit = edits[person.id];
-    if (!edit) return person;
-    return {
-      ...person,
-      ...edit.patch,
-      articles: person.articles.map(article => {
-        const revision = edit.articles?.[article.kind];
-        return revision ? { ...article, title: revision.title, body: revision.body, sources: readSources(revision.body) } : article;
-      }),
-    };
-  });
+  return imported.map(person => applyEdit(person, edits[person.id]));
 }
 
 export function readSources(markdown: string): Source[] {

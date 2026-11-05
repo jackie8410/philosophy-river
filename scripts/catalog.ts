@@ -49,20 +49,30 @@ const traditionCues: [string, RegExp][] = [
   ['哲学', /哲学家|哲学流派|哲学的|怀疑主义|思想家/],
 ];
 
-export function extractMetadata(intro: string, name: string, slug: string) {
+export function extractMetadata(intro: string, name: string, slug: string, body = '') {
   const opening = intro.split(/[。！？]/, 1)[0].slice(0, 200);
   const match = opening.match(/[（(]([^）)]+)[）)]/);
   const fullName = match?.[1].split(/[，,；;]/)[0].trim() || '';
   const originalName = /\p{Letter}/u.test(fullName) && !/\d|[\u3400-\u9fff]/.test(fullName) ? fullName : '';
   const aliases = [...new Set([
     ...(slug ? [slug.replaceAll('-', ' ')] : []),
+    ...(/^[\u3400-\u9fff·]{2,12}$/.test(fullName) ? [fullName] : []),
     ...Array.from(opening.matchAll(/(?:又称|又译|亦译|别名|名为|字)([\u3400-\u9fff·]{2,12})(?=[，、；（。])/g), m => m[1]),
   ])].filter(value => value !== name);
-  const tags = regionCues.filter(([, cue]) => cue.test(opening)).map(([label]) => label);
+  const biography = body.match(/^##\s+[^\n]*(?:生平|历史线索)[^\n]*\n+([^\n]+)/m)?.[1] || '';
+  const regionText = regionCues.some(([, cue]) => cue.test(opening)) ? opening : biography.split('。', 1)[0];
+  const tags = regionCues.filter(([, cue]) => cue.test(regionText)).map(([label]) => label);
+  let years = parseYears(opening);
+  if (years.birth === null && biography.startsWith(name)) {
+    const afterName = biography.slice(name.length).trim();
+    if (/^(?:约|大约|传统纪年为)?\s*(?:公元前|公元|前)?\s*\d{1,4}\s*年?\s*(?:至|到|—+|–|-|~|～)/.test(afterName)) {
+      years = parseYears(afterName.split(/[，。；]/, 1)[0]);
+    }
+  }
   return {
     originalName,
     aliases,
-    years: parseYears(opening),
+    years,
     region: tags.length === 1 ? tags[0] : tags.length > 1 ? '跨地区' : '',
     tradition: traditionCues.find(([, cue]) => cue.test(opening))?.[0] || '',
   };
@@ -81,7 +91,7 @@ export function parseYears(opening: string): Years {
   if (!birth || !death || birth >= death || death - birth > 130) {
     return { birth: null, death: null, label: '年代待核实', precision: 'unknown' };
   }
-  const approximate = /约|传统|争议/.test(opening);
+  const approximate = /约|传统/.test(text) || /传统纪年|生卒.{0,8}争议|年代.{0,8}争议/.test(opening);
   const year = (value: number) => value < 0 ? '前' + -value : String(value);
   return {
     birth, death,
