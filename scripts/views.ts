@@ -446,12 +446,17 @@ export function topicPage(topic: (typeof TOPICS)[number], people: Person[]) {
 }
 
 export function reading() {
+  const shopCode = link('assets/wechat-shop-code.png');
   return `<div class="wrap page">${heading('书单与阅读路径', '从原著、导读或现代延伸出发，选择适合当前问题的阅读深度。', '原典与继续阅读')}
 <section class="module"><h2>三步读懂一个问题</h2><ol class="route-steps">
 <li><strong>入门 · 找到切入点</strong><p>适合初次接触的读者。先在<a href="${link('thinkers/featured/')}">重点人物</a>选择一位作者，阅读人物导读和文章 A。</p></li>
 <li><strong>深入 · 读一段原典</strong><p>适合已经有一个概念疑问的读者。在下方找原文或可靠导读，记录论点和证据。</p></li>
 <li><strong>延伸 · 对照现实处境</strong><p>适合想继续比较的读者。读文章 B，再返回<a href="${link('topics/')}">现实问题</a>比较不同作者。</p></li>
-</ol></section><section class="module"><h2>从这些书与资料开始</h2><div class="grid book-grid">${bookList()}</div></section></div>`;
+</ol></section><section class="module"><h2>从这些书与资料开始</h2><div class="grid book-grid">${bookList()}
+<aside class="book-card wechat-shop-card" aria-labelledby="wechat-shop-title">
+  <div><span class="eyebrow">购书入口</span><h3 id="wechat-shop-title">微信小店</h3><p>用微信扫一扫，浏览小店书目。点击小店码可查看原图。</p></div>
+  <a class="wechat-shop-code" href="${shopCode}" aria-label="查看微信小店码原图"><img src="${shopCode}" width="834" height="650" alt="微信小店橱窗小程序码"></a>
+</aside></div></section></div>`;
 }
 
 export function saved() {
@@ -470,7 +475,7 @@ export function infoPage(route: string) {
 <p>${correction('站点', 'about/')}</p>`],
     'editorial/': ['编辑方法与 AI 使用', '<p>站点将原始名录、文章和图像按人物永久编号关联，保留源文件校验和版本记录。主题关联用于编辑比较，人物插图服务于阅读。</p><p>项目所有者授权使用本地资料上线。本版使用程序核对文件、映射和页面，并由 AI 辅助开发、结构化与撰写导读。正文中的观点、引文和历史细节应结合尾注及原典核对。年代区间来自可识别的源稿表述，缺项列为待核实。</p><p>心理学介绍属于思想史阅读材料。涉及具体健康问题时，请通过有资质的专业渠道求助。</p>'],
     'sources/': ['来源与版权', '<p>文章尾注保留资料所列的原典、书目、网页和写作边界说明。阅读原著与译本时，请核对实际版本、页码与授权。</p><p>站内人物图像是与文字配套的创作插图。公开端使用压缩副本，项目维护者保存原件。转引、转载或商用时，请依据具体作品和版本的使用条件。</p>'],
-    'disclosure/': ['广告与推广', '<p>当前站点的真实广告与商业推广处于关闭状态。书单外链用于查阅原文和档案，阅读建议依据书目及主题组织。</p><p>未来启用推广时，站点将在相应位置标注广告或推广关系，运营前会核对服务条件与同意设置。</p>'],
+    'disclosure/': ['广告与推广', `<p><a href="${link('reading/')}">书单页</a>的微信小店卡片是本站维护者提供的购书入口。扫码可在微信浏览小店橱窗及在售信息。</p><p>原文和档案可通过书目卡片查阅。本站当前未启用第三方广告。</p>`],
     'privacy/': ['隐私与 Cookie', '<p>网站在浏览器本地存储收藏和阅读进度，可在收藏页清除。站内搜索在浏览器中匹配公开目录。搜索页通过地址传递搜索词，地址可能进入浏览器历史及托管方的访问处理。</p><p>站点托管由 GitHub Pages 提供。访问外部书目、来源与公开纠错区时，由目的站点处理相应请求。反馈内容在 GitHub Issues 上公开，请避免提交个人联系信息。</p><p>当前部署关闭第三方广告、统计和自动视频嵌入。GitHub 的数据处理说明见 <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>。</p>'],
     'terms/': ['使用条款', '<p>本项目提供教育与阅读参考。引用历史观点时，请回到原典、版本和上下文。图像、译文和外部资料的权利依据其具体作品和来源处理。</p><p>纠错请说明页面、段落和来源。维护者通过项目记录跟踪修订与撤回。</p>'],
   };

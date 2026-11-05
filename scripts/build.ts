@@ -58,7 +58,9 @@ const leadArt = (person: Person) => {
   return art ? link('assets/images/' + assetName(person, art, 1100)) : undefined;
 };
 
-for (const name of ['icon.svg', 'river.svg', 'style.css', 'client.js', 'ad-policy.js']) copy(path.join(ROOT, 'public', name), 'assets/' + name);
+for (const name of ['icon.svg', 'river.svg', 'style.css', 'client.js', 'ad-policy.js', 'wechat-shop-code.png']) {
+  copy(path.join(ROOT, 'public', name), 'assets/' + name);
+}
 for (const person of people) {
   for (const asset of person.assets) {
     for (const width of [480, 1100] as const) {
