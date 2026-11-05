@@ -6,7 +6,7 @@ import {
   EDITS, GALLERY, INDEX, PRIVATE, ROOT, SOURCE, digest, edition, load, readSources, safeSource, save,
 } from './model.ts';
 import type { Article, Asset, EditRecord, Person, Slot } from './model.ts';
-import { extractMetadata, featured, TOPICS } from './catalog.ts';
+import { chronologyYear, extractMetadata, featured, TOPICS } from './catalog.ts';
 
 type RosterRow = { id: string; name: string; batch: string; manifestStatus: string };
 const manifest = '世界哲学与思想者长河-140位人物及资料完成总表.docx';
@@ -81,6 +81,9 @@ if (roster.length !== 140 || new Set(roster.map(row => row.id)).size !== 140 ||
 
 const old = load<Person[]>(INDEX, []);
 const edits = load<Record<string, EditRecord>>(EDITS, {});
+const published = edition().people;
+const researchedYears = new Map(published.filter(person => person.years.sources?.length)
+  .map(person => [person.id, person.years]));
 const oldById = new Map(old.map(person => [person.id, person]));
 const dirs = sourceEntries.filter(entry => entry.isDirectory() && /^\d{2,3}-[a-z0-9-]+$/.test(entry.name));
 const slugs = new Set<string>();
@@ -154,7 +157,8 @@ for (const row of roster) {
   const meta = extractMetadata(overview, name, slug, articles.find(article => article.kind === 'A')?.body);
   const topicIds = TOPICS.filter(topic => (topic.ids as readonly string[]).includes(id)).map(topic => topic.id);
   const poster = assets.find(asset => asset.slot === 'A1') || assets[0];
-  people.push({ id, name, slug, batch, ...meta, overview, articles, assets, plan, topics: topicIds, featured: profile,
+  people.push({ id, name, slug, batch, ...meta, years: researchedYears.get(id) ?? meta.years,
+    overview, articles, assets, plan, topics: topicIds, featured: profile,
     media: profile ? { display_state: 'placeholder', poster_asset_id: poster?.slot ?? null,
       poster_alt: poster?.alt ?? name + '的人物影像', caption: '人物影像 · ' + (poster?.caption ?? '栏目底图'),
       aspect_ratio: '16:9', video_url: null, duration_seconds: null, captions_url: null, transcript: null } : null,
@@ -185,7 +189,7 @@ const report = {
   expected: { people: 140, articles: 280, plans: 140, images: 1120 },
   parsed: { people: people.length, articles: people.reduce((sum, person) => sum + person.articles.length, 0),
     plans: people.filter(person => person.plan).length, images: people.reduce((sum, person) => sum + person.assets.length, 0) },
-  published: edition().people.length,
+  published: published.length,
   roster,
   auxiliary: sourceEntries.filter(entry => !dirs.includes(entry) && entry.name !== manifest).map(entry => entry.name).sort(),
   issues, duplicateImages, changes, inventory,
@@ -194,4 +198,5 @@ save(INDEX, people);
 save(path.join(PRIVATE, 'import-report.json'), report);
 console.log(JSON.stringify({ parsed: report.parsed, issues: issues.length, duplicateImageGroups: duplicateImages.length,
   changes: changes.length, datesKnown: people.filter(person => person.years.birth !== null).length,
+  datesPositioned: people.filter(person => chronologyYear(person.years) !== null).length,
   titleIssues: issues.filter(issue => issue.kind === '姓名需核验') }, null, 2));

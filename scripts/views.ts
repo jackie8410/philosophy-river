@@ -1,7 +1,7 @@
 import MarkdownIt from 'markdown-it';
 import { BASE, REPO, SITE, SITE_URL, assetName, mediaValid } from './model.ts';
-import type { Article, Asset, Person, Relationship, Source } from './model.ts';
-import { BOOKS, ERAS, TOPICS, era } from './catalog.ts';
+import type { Article, Asset, Person, Relationship, Source, Years } from './model.ts';
+import { BOOKS, ERAS, TOPICS, chronologyYear, era } from './catalog.ts';
 
 export const link = (route = '') => BASE + route.replace(/^\/+/, '');
 export const personRoute = (person: Person) => 'thinkers/' + person.slug + '/';
@@ -54,8 +54,9 @@ export interface PageOptions {
   ad?: unknown;
 }
 
-export function layout(content: string, options: PageOptions) {
+export function layout(content: string, options: PageOptions, assetRevision: string) {
   const canonical = new URL(link(options.route), SITE_URL).href;
+  const assets = '?v=' + encodeURIComponent(assetRevision);
   const title = options.route ? options.title + ' · ' + SITE : SITE;
   const trail = options.crumbs ?? (options.route ? [['首页', ''], [options.title, options.route]] : []);
   const breadcrumb = trail.length ? {
@@ -78,7 +79,7 @@ ${options.noindex || options.draft ? '<meta name="robots" content="noindex,follo
 <meta property="og:image" content="${e(new URL(options.share || link('assets/river.svg'), SITE_URL).href)}">
 <meta name="color-scheme" content="light"><meta name="theme-color" content="#f7f5ed">
 <link rel="icon" type="image/svg+xml" href="${link('assets/icon.svg')}">
-<link rel="stylesheet" href="${link('assets/style.css')}"><script src="${link('assets/client.js')}" type="module"></script>
+<link rel="stylesheet" href="${link('assets/style.css') + assets}"><script src="${link('assets/client.js') + assets}" type="module"></script>
 ${inHead}</head>
 <body><a class="skip" href="#main">跳至正文</a>
 <header class="mast"><div class="wrap mast-inner">
@@ -117,7 +118,7 @@ function card(person: Person, search = false, top = false) {
   const tags = [person.region, person.tradition].filter(Boolean);
   const data = search ? ` data-record data-search="${e([person.name, person.originalName, ...person.aliases, ...tags,
     person.featured?.direction || '', ...person.topics.map(id => TOPICS.find(topic => topic.id === id)?.name || ''),
-    ...person.articles.map(article => article.title)].join(' '))}" data-era="${e(era(person.years.birth))}"
+    ...person.articles.map(article => article.title)].join(' '))}" data-era="${e(era(chronologyYear(person.years)))}"
 data-region="${e(person.region || '待核实')}" data-tradition="${e(person.tradition || '待核实')}" data-topics="${e(person.topics.join(' '))}"` : '';
   return `<article class="person-card"${data}><a href="${link(personRoute(person))}" class="card-link">
 ${top ? picture(person) : ''}<div class="card-copy"><div class="card-meta"><span>NO. ${person.id}</span>${person.featured ? '<span class="mini-tag">重点人物</span>' : ''}</div>
@@ -168,12 +169,13 @@ const pairs = (items: string[]): [string, string][] => [...new Set(items)].map(i
 export function directory(people: Person[], search = false) {
   const head = search ? heading('站内搜索', '检索中文名、原文名、已录入别名、重点概念与主题。', '检索')
     : heading('人物总览', '以人物为入口。用名字、时代、地区、传统或主题缩小范围。', '人物索引');
+  const presentEras = new Set(people.map(person => era(chronologyYear(person.years))));
   return `<div class="wrap page">${head}
 ${!search ? `<div class="inline-callout"><div><strong>重点人物 · 深度阅读</strong><p>循导读、概念、思想脉络和原典继续阅读。</p></div>${button('进入重点人物', link('thinkers/featured/'), true)}</div>` : ''}
 <section class="catalog" data-catalog data-search-page="${String(search)}" aria-label="人物检索">
 <h2 class="sr-only">匹配人物</h2>
 <form class="filters" data-filters><label class="keyword">${searchIcon}<span class="sr-only">关键词</span><input name="q" data-query type="search" placeholder="例：庄子、Hume、知行合一"></label>
-${select('era', '时代', pairs(ERAS))}${select('region', '地区', pairs(people.map(person => person.region || '待核实').sort()))}
+${select('era', '时代', pairs(ERAS.filter(range => presentEras.has(range))))}${select('region', '地区', pairs(people.map(person => person.region || '待核实').sort()))}
 ${select('tradition', '传统', pairs(people.map(person => person.tradition || '待核实').sort()))}
 ${select('topics', '主题', TOPICS.map(topic => [topic.id, topic.short]))}
 <button class="quiet" type="reset">清除筛选</button></form>
@@ -194,16 +196,30 @@ export function featuredDirectory(people: Person[]) {
 }
 
 export function timeline(people: Person[]) {
-  const ordered = [...people].sort((a, b) => (a.years.birth ?? Infinity) - (b.years.birth ?? Infinity) || a.id.localeCompare(b.id));
-  return `<div class="wrap page">${heading('时间长河', '以可考的年代浏览人物。约数随资料标示，缺少可靠区间的记录单列。', '时间索引')}
-<div class="timeline-tools"><nav aria-label="时代跳转" class="chip-row">${ERAS.map((range, index) =>
+  const ordered = people.map(person => ({ person, year: chronologyYear(person.years) }))
+    .sort((a, b) => (a.year ?? Infinity) - (b.year ?? Infinity) || a.person.id.localeCompare(b.person.id));
+  const periods = ERAS.map((range, index) => ({ range, index, group: ordered.filter(item => era(item.year) === range) }))
+    .filter(period => period.group.length > 0);
+  return `<div class="wrap page">${heading('时间长河', '以生年为主排序。生年只有区间时用较早界线，生年不详时用所列活动期或传统纪年定位。约数和不同说法可在年代依据中查看。', '时间索引')}
+<div class="timeline-tools"><nav aria-label="时代跳转" class="chip-row">${periods.map(({ range, index }) =>
     `<a class="chip" href="#period-${index}">${e(range)}</a>`).join('')}</nav>
 <label>阅读方向 <select data-time-direction><option value="asc">由早到晚</option><option value="desc">由晚到早</option></select></label></div>
-<div class="timeline" data-timeline>${ERAS.map((range, index) => {
-    const group = ordered.filter(person => era(person.years.birth) === range);
-    return `<section data-period="${index}" id="period-${index}"><h2>${e(range)} <span>${group.length} 位</span></h2>
-<ol>${group.map(person => `<li><a href="${link(personRoute(person))}"><strong>${e(person.name)}</strong><span>${e(person.years.label)}</span>${right}</a></li>`).join('')}</ol></section>`;
-  }).join('')}</div></div>`;
+<div class="timeline" data-timeline>${periods.map(({ range, index, group }) => `<section data-period="${index}"${range === era(null) ? ' data-unknown' : ''} id="period-${index}"><h2>${e(range)} <span>${group.length} 位</span></h2>
+<ol>${group.map(({ person, year }) => {
+    const href = link(personRoute(person));
+    return `<li data-timeline-id="${e(person.id)}" data-timeline-year="${e(year)}"><a class="timeline-person" href="${href}"><strong>${e(person.name)}</strong><span class="timeline-date">${e(person.years.label)}</span>${right}</a>
+${person.years.sources?.length ? `<a class="timeline-citation" href="${href}#chronology">年代依据<span class="sr-only"> · ${e(person.name)}</span></a>` : ''}</li>`;
+  }).join('')}</ol></section>`).join('')}</div></div>`;
+}
+
+function chronologySources(years: Years) {
+  if (!years.sources?.length) return '';
+  return `<section class="module chronology-info" id="chronology"><h2>年代依据</h2>
+${years.note ? `<p>${e(years.note)}</p>` : ''}<ul class="chronology-sources">${years.sources.map(source => {
+    const url = external(source.url);
+    return `<li>${url ? `<a href="${e(url)}" rel="noopener noreferrer">${e(source.title)} ${arrow}</a>` : e(source.title)}
+<p>${e(source.supports)}</p></li>`;
+  }).join('')}</ul></section>`;
 }
 
 const md = new MarkdownIt({ html: false, linkify: false, typographer: false });
@@ -367,8 +383,10 @@ export function personPage(person: Person, people: Person[]) {
 <h1>${e(person.name)}</h1>${person.originalName ? `<p class="original-name" lang="en">${e(person.originalName)}</p>` : ''}
 ${aliases.length ? `<p class="muted">检索别名 ${e(aliases.join(' · '))}</p>` : ''}
 <p class="profile-date">${e(person.years.label)}${person.region ? ' · ' + e(person.region) : ''}${person.tradition ? ' · ' + e(person.tradition) : ''}</p>
+${person.years.sources?.length ? '<p class="profile-citation"><a href="#chronology">查看年代依据 ↓</a></p>' : ''}
 <p class="lede">${e(excerpt(person.overview, 230))}</p><div class="actions">${bookmark('person-' + person.id, person.name, personRoute(person))}${correction(person.name, personRoute(person))}</div>
 </div><figure class="profile-figure"><div class="picture"><span class="picture-placeholder" aria-hidden="true">${e(person.name)}</span>${art ? image(person, art, true) : ''}</div><figcaption>${e(person.name)} · 人物主题插图</figcaption></figure></section>
+${chronologySources(person.years)}
 <section class="module" id="articles"><div class="section-bar"><div><span class="eyebrow">A / B</span><h2>从两篇文章开始</h2></div></div>
 <div class="grid two">${person.articles.map(article => `<a class="article-card" href="${link(articleRoute(person, article.kind))}"><span class="article-letter">${article.kind}</span>
 <div><h3>${article.kind === 'A' ? '生平与主要思想' : '现代意义与启发'}</h3><p>${article.kind === 'A' ? '由处境和作品理解主要问题。' : '把思想放回现实处境，辨认解释的限度。'}</p></div>${right}</a>`).join('')}</div></section>

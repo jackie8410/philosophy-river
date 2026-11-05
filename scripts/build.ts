@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, lstatSync, mkdirSync, mkdtempSync, realpathSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import {
   articlePage, articleRoute, directory, e, excerpt, featuredDirectory, home, infoNav, infoPage, layout,
@@ -6,7 +6,7 @@ import {
 } from './views.ts';
 import type { PageOptions } from './views.ts';
 import { BOOKS, TOPICS } from './catalog.ts';
-import { PRIVATE, ROOT, SITE, SITE_URL, assetName, currentPeople, edition, load, mediaValid } from './model.ts';
+import { PRIVATE, ROOT, SITE, SITE_URL, assetName, currentPeople, digest, edition, load, mediaValid } from './model.ts';
 import type { Article, Person } from './model.ts';
 
 const draft = process.argv.includes('--drafts');
@@ -29,6 +29,7 @@ const ads = load(path.join(ROOT, 'config', 'ads.json'), {
 });
 const production = !draft && process.env.SITE_PRODUCTION === '1';
 const mediaFolder = path.join(ROOT, 'content', 'media');
+const assetRevision = digest(Buffer.concat(['style.css', 'client.js'].map(name => readFileSync(path.join(ROOT, 'public', name))))).slice(0, 12);
 
 function write(relative: string, content: string) {
   const file = path.join(stage, relative);
@@ -46,7 +47,7 @@ function page(content: string, options: PageOptions) {
   const file = route === '404.html' ? route : route + 'index.html';
   if (emitted.has(file)) throw new Error('重复发布路由 ' + route);
   emitted.add(file);
-  write(file, layout(content, { ...options, draft }));
+  write(file, layout(content, { ...options, draft }, assetRevision));
   routes.push(route);
   if (options.noindex || draft) noindex.add(route);
 }

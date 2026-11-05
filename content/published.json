@@ -169,8 +169,21 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "传统置于公元前6至前5世纪，生卒有争议",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": -600,
+          "kind": "tradition"
+        },
+        "note": "按老子为孔子前辈或同时代人的传统定位。老聃、李耳的身份关系及其历史年代有争议，《老子》的成书年代另行讨论。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Laozi",
+            "url": "https://plato.stanford.edu/entries/laozi/",
+            "supports": "讨论《史记》所载老聃与孔子相见的传统，以及老聃、李耳是否同一人的不同解释。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "道家",
@@ -325,10 +338,24 @@
         "mozi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -470,
+        "death": -391,
+        "label": "约公元前470—前391年",
+        "precision": "approximate",
+        "note": "生卒年为估计值，较稳妥的活动期在公元前5世纪末至前4世纪初。",
+        "sources": [
+          {
+            "title": "互联网哲学百科 · 中国哲学综述，墨子与墨家",
+            "url": "https://iep.utm.edu/2018/",
+            "supports": "2018 年归档中的墨子与墨家小节列约公元前470—前391年。"
+          },
+          {
+            "title": "互联网哲学百科 · Mozi",
+            "url": "https://iep.utm.edu/mozi/",
+            "supports": "专条把墨翟的活动放在公元前5世纪末至前4世纪初，传记资料有限。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "东亚",
       "tradition": "",
@@ -979,9 +1006,27 @@
       ],
       "years": {
         "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "death": -405,
+        "label": "约公元前450年活动，生卒有争议",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": -450,
+          "kind": "activity"
+        },
+        "note": "时间线采用活动期定位。早期常见的长纪年约为公元前560—前480年，后来的研究提出约前405年卒等较晚纪年，生年无法据此定为某一年。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Buddha",
+            "url": "https://plato.stanford.edu/entries/buddha/",
+            "supports": "将历史佛陀的活动期放在约公元前450年。早期常用约前560—前480年，许多研究将卒年放在约前405年。"
+          },
+          {
+            "title": "牛津印度哲学手册 · 人物年代总表",
+            "url": "https://academic.oup.com/edited-volume/27982/chapter/211656615",
+            "supports": "并列公元前566—前486年和前480—前400年两种纪年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "佛学",
@@ -1138,8 +1183,21 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元前7至前6世纪（奥义书时代）",
+        "precision": "period",
+        "sortAnchor": {
+          "year": -700,
+          "kind": "tradition"
+        },
+        "note": "早期奥义书人物的时代定位来自文本和思想史编年，个体的生卒年份缺乏可靠记录。",
+        "sources": [
+          {
+            "title": "牛津印度哲学手册 · 人物年代总表",
+            "url": "https://academic.oup.com/edited-volume/27982/chapter/211656615",
+            "supports": "将耶若婆诃等早期奥义书思想者列于约公元前7至前6世纪。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -1292,10 +1350,24 @@
         "mahavira"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": -497,
+        "death": -425,
+        "label": "约公元前497—前425年（另有传统纪年）",
+        "precision": "disputed",
+        "note": "时间线采用 JAINpedia 所列现代推算。白衣派传统作公元前599—前527年，天衣派传统作前582—前510年。",
+        "sources": [
+          {
+            "title": "JAINpedia · 耆那教编年",
+            "url": "https://jainpedia.org/resources/chronology/",
+            "supports": "列现代推算约前497—前425年，白衣派传统前599—前527年，天衣派传统前582—前510年。"
+          },
+          {
+            "title": "牛津印度哲学手册 · 人物年代总表",
+            "url": "https://academic.oup.com/edited-volume/27982/chapter/211656615",
+            "supports": "大雄一项采用约公元前599—前527年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -1452,8 +1524,26 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元前1000年（年代有争议）",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": -1000,
+          "kind": "activity"
+        },
+        "note": "以总论所列约公元前1000年作为时间线位置。语言学重构、伊朗传统纪年和其他历史推算相差较大，生卒均无法定年。",
+        "sources": [
+          {
+            "title": "伊朗百科全书 · Zoroaster 总论",
+            "url": "https://www.iranicaonline.org/articles/zoroaster-ii-general-survey/",
+            "supports": "概述约前1000年的估计，并讨论早至约前1750年、晚至前6世纪初的提案。"
+          },
+          {
+            "title": "伊朗百科全书 · Zoroaster 与《阿维斯陀》",
+            "url": "https://www.iranicaonline.org/articles/zoroaster-iii-zoroaster-in-the-avesta/",
+            "supports": "从古阿维斯陀语与吠陀语的比较出发，提出公元前二千纪的较早定位。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -1768,8 +1858,21 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元前500年活动，生卒不详",
+        "precision": "period",
+        "sortAnchor": {
+          "year": -500,
+          "kind": "activity"
+        },
+        "note": "按可考活动期定位，现存传记材料不足以确定生卒年。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Heraclitus",
+            "url": "https://plato.stanford.edu/entries/heraclitus/",
+            "supports": "将赫拉克利特的活动年代放在约公元前500年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "",
@@ -2084,8 +2187,26 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元前428或前427年生，前348或前347年卒",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": -428,
+          "kind": "birth-range"
+        },
+        "note": "主显示采用常见的前428/427—前348/347年。斯坦福哲学百科另列约前429—前347年。",
+        "sources": [
+          {
+            "title": "互联网哲学百科 · Plato",
+            "url": "https://iep.utm.edu/plato/",
+            "supports": "列常用生年公元前428或427年、卒年前348或347年，并指出古代纪年有矛盾。"
+          },
+          {
+            "title": "斯坦福哲学百科 · Plato",
+            "url": "https://plato.stanford.edu/entries/plato/",
+            "supports": "条目列约公元前429年生、前347年卒。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -2755,8 +2876,31 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元前6至前4年生，约公元30年或33年卒",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": -6,
+          "kind": "birth-range"
+        },
+        "note": "出生区间依希律王年代与福音书材料推定。公元30年和33年是两种受难纪年，具体日期没有共识。",
+        "sources": [
+          {
+            "title": "美国圣经协会 · Jesus Christ in the New Testament",
+            "url": "https://www.americanbible.org/engage/bible-resources/articles/jesus-christ-in-the-new-testament/",
+            "supports": "讨论希律王的卒年与耶稣可能的出生年份，并比较受难年代。"
+          },
+          {
+            "title": "New Testament Studies · Dating the Death of Jesus",
+            "url": "https://www.cambridge.org/core/journals/new-testament-studies/article/dating-the-death-of-jesus-memory-and-the-religious-imagination/0458FC0CA55BEF810BCC411AC2765860",
+            "supports": "研究讨论常用的公元30年推定，并说明精确日期难以复原。"
+          },
+          {
+            "title": "Encyclopaedia Romana · When Did Jesus Die?",
+            "url": "https://penelope.uchicago.edu/encyclopaedia_romana/calendar/jesus.html",
+            "supports": "讨论公元30年和33年的推算，并按《约翰福音》的纪年推导公元33年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -2909,10 +3053,24 @@
         "paul"
       ],
       "years": {
-        "birth": null,
+        "birth": 8,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元8年生，约64至65年卒",
+        "precision": "approximate",
+        "note": "两端均为推算。梵蒂冈讲座根据《腓利门书》的写作年代估计约公元8年生，所引新约研究教材的年表估计约64至65年卒。",
+        "sources": [
+          {
+            "title": "梵蒂冈 · 保罗生平",
+            "url": "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080827.html",
+            "supports": "根据《腓利门书》写作时的年龄线索，估计约公元8年出生。"
+          },
+          {
+            "title": "An Introduction to the New Testament · 第2版表6",
+            "url": "https://www.cur.ac.rw/mis/main/library/documents/book_file/digital-640f277b35be85.56268980.pdf",
+            "supports": "保罗传教年表将卒年估为公元64至65年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -3065,10 +3223,18 @@
         "augustine"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 354,
+        "death": 430,
+        "label": "354—430年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Augustine of Hippo",
+            "url": "https://plato.stanford.edu/entries/augustine/",
+            "supports": "生平条目列354年11月13日出生、430年8月28日去世。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "哲学",
@@ -3221,10 +3387,19 @@
         "nagarjuna"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 150,
+        "death": 250,
+        "label": "约150—250年",
+        "precision": "approximate",
+        "note": "条目讨论的是中观思想家龙树。传记材料和同名人物问题使生卒只能估计。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Nāgārjuna",
+            "url": "https://plato.stanford.edu/entries/nagarjuna/",
+            "supports": "条目将中观思想家龙树的生卒约定为公元150至250年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "佛学",
@@ -3377,10 +3552,24 @@
         "plotinus"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 204,
+        "death": 270,
+        "label": "约204年—270年",
+        "precision": "approximate",
+        "note": "生年由波菲利所记年龄和罗马皇帝纪年推算。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Plotinus",
+            "url": "https://plato.stanford.edu/entries/plotinus/",
+            "supports": "根据弟子波菲利的生平记载，推得约204年生，并记270年去世。"
+          },
+          {
+            "title": "互联网哲学百科 · Plotinus",
+            "url": "https://iep.utm.edu/plotinus/",
+            "supports": "传记列204年至270年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -3535,8 +3724,26 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元4至5世纪（生卒有争议）",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 301,
+          "kind": "activity"
+        },
+        "note": "史料对年代与人物归属都有分歧。按学界常讨论的公元4至5世纪定位，不用任一方案充当确定的生卒年。",
+        "sources": [
+          {
+            "title": "互联网哲学百科 · Vasubandhu",
+            "url": "https://iep.utm.edu/vasubandhu/",
+            "supports": "列约316—396年、320—400年、400—480年等方案，并讨论两位同名人物的假说。"
+          },
+          {
+            "title": "斯坦福哲学百科 · Vasubandhu",
+            "url": "https://plato.stanford.edu/entries/vasubandhu/",
+            "supports": "结合传统传记所记笈多时代人物，说明将世亲置于公元4世纪的依据。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "南亚",
       "tradition": "佛学",
@@ -3691,8 +3898,26 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "344—413年，或350—409年",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 344,
+          "kind": "birth-range"
+        },
+        "note": "两套编年在佛教研究中均见采用。时间线取较早的生年作为定位。",
+        "sources": [
+          {
+            "title": "佛教研究词汇库 · 法鼓文理学院",
+            "url": "https://glossaries.dila.edu.tw/search?locale=zh-TW&term=Kum%C4%81raj%C4%ABva+%28&utf8=%E2%9C%93",
+            "supports": "条目和所引研究分别使用约344—413年、350—409年。"
+          },
+          {
+            "title": "创价大学国际佛教学高等研究所 · Seishi Karashima 论文",
+            "url": "https://iriab.soka.ac.jp/content/pdf/karashima/Karashima2015-Mahasamghikas_and_Vaitulya.pdf",
+            "supports": "研究附录将350—409年和344—413年并列为鸠摩罗什的两套纪年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "南亚",
       "tradition": "哲学",
@@ -3845,8 +4070,26 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约475至477年生，约526年卒（另说524年）",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 475,
+          "kind": "birth-range"
+        },
+        "note": "主显示采用斯坦福哲学百科的估计。另一种常见编年为约480年生、524年卒。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Boethius",
+            "url": "https://plato.stanford.edu/entries/boethius/",
+            "supports": "生平章节估计生年约475至477年，处刑可能在526年。"
+          },
+          {
+            "title": "互联网哲学百科 · Boethius",
+            "url": "https://iep.utm.edu/boethius/",
+            "supports": "生平条目采用约480—524年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -3999,10 +4242,18 @@
         "muhammad"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 570,
+        "death": 632,
+        "label": "约570年—632年",
+        "precision": "approximate",
+        "sources": [
+          {
+            "title": "大都会艺术博物馆 · The Birth of Islam",
+            "url": "https://www.metmuseum.org/essays/the-birth-of-islam",
+            "supports": "列约570年出生，632年去世。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -4155,8 +4406,21 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约公元8世纪活动，生卒有争议",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 701,
+          "kind": "activity"
+        },
+        "note": "按主要活动世纪定位。生卒有约700—750年和788—820年等方案，传记材料不足以确定一组年份。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Śaṅkara",
+            "url": "https://plato.stanford.edu/entries/shankara/",
+            "supports": "并列中村元所推700—750年、较早研究所用788—820年，以及7世纪末至8世纪初的定位。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -4309,10 +4573,18 @@
         "fazang"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 643,
+        "death": 712,
+        "label": "643—712年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Huayan Buddhism",
+            "url": "https://plato.stanford.edu/entries/buddhism-huayan/",
+            "supports": "华严佛教条目的法藏专节列643年至712年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "东亚",
       "tradition": "",
@@ -4777,10 +5049,24 @@
         "avicenna"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 970,
+        "death": 1037,
+        "label": "约970年—1037年（生年另说约980年）",
+        "precision": "disputed",
+        "note": "时间线采用斯坦福哲学百科的约970年。伊朗百科全书保留约980年一说，两者对卒年1037年一致。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Ibn Sina",
+            "url": "https://plato.stanford.edu/entries/ibn-sina/",
+            "supports": "依据其自传及学生的续传，将生年估为约970年，卒年为1037年。"
+          },
+          {
+            "title": "伊朗百科全书 · Avicenna",
+            "url": "https://www.iranicaonline.org/articles/avicenna-index/",
+            "supports": "列生年约980年并加存疑标记，卒年为1037年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "儒学",
@@ -4933,10 +5219,24 @@
         "anselm"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1033,
+        "death": 1109,
+        "label": "约1033年—1109年",
+        "precision": "approximate",
+        "note": "学术条目通常列1033年生，也有文献对这一生年保留疑问。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Anselm of Canterbury",
+            "url": "https://plato.stanford.edu/entries/anselm/",
+            "supports": "生平章节列1033年出生、1109年4月21日去世。"
+          },
+          {
+            "title": "BiblIndex · Anselm of Canterbury",
+            "url": "https://dapytains.biblindex.org/en/authors/anselmus-cantuariensis",
+            "supports": "将生年1033年标为有疑问，卒年列1109年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -5090,9 +5390,22 @@
       ],
       "years": {
         "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "death": 1111,
+        "label": "约1055/1056年生，1111年卒",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 1055,
+          "kind": "birth-range"
+        },
+        "note": "主显示采用本人书信和自传所支持的推算。部分较晚传记记1058或1059年生。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · al-Ghazālī",
+            "url": "https://plato.stanford.edu/entries/al-ghazali/",
+            "supports": "根据书信与自传中的年龄线索推算1055或1056年生。后代传记写1058或1059年，卒年为1111年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "宗教思想",
@@ -5245,10 +5558,18 @@
         "zhu xi"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1130,
+        "death": 1200,
+        "label": "1130—1200年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "互联网哲学百科 · Zhu Xi",
+            "url": "https://iep.utm.edu/zhu-xi-chu-hsi-chinese-philosopher/",
+            "supports": "条目列朱熹生于1130年，卒于1200年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "东亚",
       "tradition": "儒学",
@@ -5401,10 +5722,24 @@
         "maimonides"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1138,
+        "death": 1204,
+        "label": "1138—1204年（生年旧说1135年）",
+        "precision": "disputed",
+        "note": "时间线采用1138年。旧说1135年见于较早文献，依据本人手稿等材料的考证支持1138年。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Maimonides",
+            "url": "https://plato.stanford.edu/entries/maimonides/",
+            "supports": "条目列1138年出生、1204年去世。"
+          },
+          {
+            "title": "Mount Sinai Journal of Medicine · 迈蒙尼德生年考证",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/11344855/",
+            "supports": "专门比较1135年旧说与1138年说，考证支持1138年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -5557,10 +5892,18 @@
         "averroes"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1126,
+        "death": 1198,
+        "label": "1126—1198年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "互联网哲学百科 · Ibn Rushd (Averroes)",
+            "url": "https://iep.utm.edu/ibn-rushd-averroes/",
+            "supports": "条目列伊本·鲁世德生于1126年，卒于1198年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "哲学",
@@ -5713,10 +6056,23 @@
         "dogen"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1200,
+        "death": 1253,
+        "label": "1200—1253年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "日本曹洞宗 · Dōgen Kigen",
+            "url": "https://www.sotozen.com/eng/library/glossary/individual.html?key=d_gen",
+            "supports": "人物词条列道元希玄的生卒年为1200至1253年。"
+          },
+          {
+            "title": "日莲佛教图书馆 · Dōgen",
+            "url": "https://www.nichirenlibrary.org/en/dic/Content/D/105",
+            "supports": "佛教辞典道元条目同样列1200至1253年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "东亚",
       "tradition": "佛学",
@@ -5869,10 +6225,18 @@
         "thomas aquinas"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1225,
+        "death": 1274,
+        "label": "约1225年—1274年",
+        "precision": "approximate",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Thomas Aquinas",
+            "url": "https://plato.stanford.edu/entries/aquinas/",
+            "supports": "生平章节把生年定在约1225年，卒年为1274年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "哲学",
@@ -6025,10 +6389,19 @@
         "ockham"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1287,
+        "death": 1347,
+        "label": "约1287年—1347年",
+        "precision": "approximate",
+        "note": "生年由较晚的生平事件推算。该条目认为出生时间可能在1287年末或1288年初。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · William of Ockham",
+            "url": "https://plato.stanford.edu/entries/ockham/",
+            "supports": "生平章节推定1287年末或1288年初出生，卒于1347年4月9日夜至10日。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "",
@@ -6181,10 +6554,23 @@
         "wang yangming"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1472,
+        "death": 1529,
+        "label": "1472—1529年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Wang Yangming",
+            "url": "https://plato.stanford.edu/entries/wang-yangming/",
+            "supports": "条目列1472年至1529年。"
+          },
+          {
+            "title": "互联网哲学百科 · Wang Yangming",
+            "url": "https://iep.utm.edu/wangyang/",
+            "supports": "人物条目同样列1472年至1529年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "东亚",
       "tradition": "儒学",
@@ -6357,10 +6743,23 @@
         "ibn khaldun"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1332,
+        "death": 1406,
+        "label": "1332—1406年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "美国国会图书馆 · Ibn Khaldoun 传记馆藏",
+            "url": "https://www.loc.gov/item/2021666190/",
+            "supports": "馆藏人物介绍列伊本·赫勒敦生卒年为1332至1406年。"
+          },
+          {
+            "title": "剑桥大学出版社 · Ibn Khaldūn: Political Thought",
+            "url": "https://www.cambridge.org/core/books/abs/ibn-khaldun-political-thought/general-introduction/F467FD74E36E5E568D3CE78F644CB8CE",
+            "supports": "导论以1332至1406年为伊本·赫勒敦的生卒年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "",
@@ -6513,10 +6912,18 @@
         "nicholas of cusa"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1401,
+        "death": 1464,
+        "label": "1401—1464年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Nicholas of Cusa",
+            "url": "https://plato.stanford.edu/entries/cusanus/",
+            "supports": "条目列尼古拉·库萨生于1401年，卒于1464年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "哲学",
@@ -6669,10 +7076,18 @@
         "machiavelli"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1469,
+        "death": 1527,
+        "label": "1469—1527年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Niccolò Machiavelli",
+            "url": "https://plato.stanford.edu/entries/machiavelli/",
+            "supports": "生平记1469年5月3日出生、1527年6月21日去世。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -6826,9 +7241,32 @@
       ],
       "years": {
         "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "death": 1536,
+        "label": "1466、1467或1469年生，1536年卒",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 1466,
+          "kind": "birth-range"
+        },
+        "note": "不同传记采用1466、1467或1469年。时间线以最早的候选生年定位，卒年1536年。",
+        "sources": [
+          {
+            "title": "鹿特丹伊拉斯谟大学 · Desiderius Erasmus",
+            "url": "https://www.eur.nl/en/esphil/desiderius-erasmus-1469-1536",
+            "supports": "人物介绍采用1469至1536年。"
+          },
+          {
+            "title": "罗格斯大学古典学者传记库 · Desiderius Erasmus",
+            "url": "https://dbcs.rutgers.edu/all-scholars/erasmus-desiderius",
+            "supports": "列1466年出生。"
+          },
+          {
+            "title": "斯坦福哲学百科 · Desiderius Erasmus 旧版",
+            "url": "https://plato.stanford.edu/archives/win2010/entries/erasmus/",
+            "supports": "旧版说明生年有分歧，并介绍1467年一说。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "",
@@ -6981,10 +7419,18 @@
         "martin luther"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1483,
+        "death": 1546,
+        "label": "1483—1546年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "维滕贝格路德城 · Martin Luther",
+            "url": "https://lutherstadt-wittenberg.de/en/see-discover/famous-personalities/martin-luther",
+            "supports": "人物介绍列1483年11月10日出生、1546年2月18日去世。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -7137,10 +7583,18 @@
         "montaigne"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1533,
+        "death": 1592,
+        "label": "1533—1592年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Michel de Montaigne",
+            "url": "https://plato.stanford.edu/entries/montaigne/",
+            "supports": "生平条目列1533年至1592年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "哲学",
@@ -7313,10 +7767,18 @@
         "francis bacon"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1561,
+        "death": 1626,
+        "label": "1561—1626年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Francis Bacon",
+            "url": "https://plato.stanford.edu/entries/francis-bacon/",
+            "supports": "条目列1561年至1626年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "",
@@ -7469,10 +7931,18 @@
         "galileo"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1564,
+        "death": 1642,
+        "label": "1564—1642年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Galileo Galilei",
+            "url": "https://plato.stanford.edu/entries/galileo/",
+            "supports": "条目列1564年出生、1642年去世。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "",
       "tradition": "",
@@ -7625,10 +8095,18 @@
         "descartes"
       ],
       "years": {
-        "birth": null,
-        "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "birth": 1596,
+        "death": 1650,
+        "label": "1596—1650年",
+        "precision": "documented",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · René Descartes",
+            "url": "https://plato.stanford.edu/entries/descartes/",
+            "supports": "条目列1596年至1650年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "欧洲",
       "tradition": "",
@@ -7783,8 +8261,21 @@
       "years": {
         "birth": null,
         "death": null,
-        "label": "年代待核实",
-        "precision": "unknown"
+        "label": "约1571至1572年生，约1635至1636年卒（另说1640至1641年）",
+        "precision": "disputed",
+        "sortAnchor": {
+          "year": 1571,
+          "kind": "birth-range"
+        },
+        "note": "主显示采用家族记载、著作附记支持的1635至1636年。传统纪年另作1640至1641年，缺少明确证据。",
+        "sources": [
+          {
+            "title": "斯坦福哲学百科 · Mulla Sadra",
+            "url": "https://plato.stanford.edu/entries/mulla-sadra/",
+            "supports": "列约1571至1572年出生，传统卒年1640至1641年，家族记载和文稿附记支持1635至1636年。"
+          }
+        ],
+        "checkedAt": "2026-11-05"
       },
       "region": "西亚及北非",
       "tradition": "宗教思想",
@@ -23755,6 +24246,357 @@
       "at": "2026-11-05T10:22:14.403Z",
       "actor": "Codex",
       "note": "改进源稿年代精度、地区及姓名字段的提取，沿用首发授权。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "002",
+      "state": "published",
+      "version": "6f8ca5fc2913aa1c8223994e9fcbe5c69d6b0e2c188acca487f6fb5c623374a1",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "003",
+      "state": "published",
+      "version": "5e152937f0acfb408674e6f100a991bad1db71d310a5b459829c4a740646d302",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "007",
+      "state": "published",
+      "version": "371bf4f62e47ee54871417051e01a2321365671bdc3ea9209ec940e484ecaf4c",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "008",
+      "state": "published",
+      "version": "4048f1d1e609696ffb6c3f480058ecf90f074c928325010cc4dd8ba23066dcac",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "009",
+      "state": "published",
+      "version": "3f7f6be8ffc591ec2c457125efd2050212a3bbe66e537b027b90bc17e19f7521",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "010",
+      "state": "published",
+      "version": "47e5bb547d246f9389785be931730e48191802fc86b378bb9564a9c060b3e856",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "012",
+      "state": "published",
+      "version": "77f2e8d6ad7423b6d888d39018e620994a118a941e286af0339a97daf703f912",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "014",
+      "state": "published",
+      "version": "827530eb38fa69d6c56fcf587329e0100bc5411d985e9111f91ce15ac7309c40",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "018",
+      "state": "published",
+      "version": "abc6acb318dfd6b8a04ab46732c4c88c012b469fc56a4eca37116e16192744dc",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "019",
+      "state": "published",
+      "version": "a3d3fa2b0b2a216a140796514b01de7b71fcf9fcc94a3e7d453786e371729f5a",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "020",
+      "state": "published",
+      "version": "b0baae3afb8c89c22de7bc195c0359bccf50319da71dc008e8c1fbfb49e421b3",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "021",
+      "state": "published",
+      "version": "9a496c1726dae913959dbba2a0216d158deafc0f2ffd5206888501badf55d291",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "022",
+      "state": "published",
+      "version": "a9aa24d4a9698a7fc4c953f4ac45f2d747d2febdbbc87e51a109e30caefa48cc",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "023",
+      "state": "published",
+      "version": "2d8911435eb33216fa5a4e79f9d906dff653488efbc9dec480f8fb43b143c37e",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "024",
+      "state": "published",
+      "version": "d198a388bc45024a07922d7de6cc55f11dab3b8b2f285a2612db50526a7d6d71",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "025",
+      "state": "published",
+      "version": "bf754587262deb7e0582ce00441251fdeb9347d87a4d705bc928c3e5dd940dd9",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "026",
+      "state": "published",
+      "version": "3080bd5b1369b6dafb72728adbb106ed292ff7fb2083d1851a429dc8f7368a0e",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "027",
+      "state": "published",
+      "version": "060815abfb1a59268a2d06f04aefa5c1af24dbf3c8af5effbd479f04d55ca9cc",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "028",
+      "state": "published",
+      "version": "d730e5b542f89c39bdba575e0144ad81aba35706d882c00dbce3d655a1560a98",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "031",
+      "state": "published",
+      "version": "2d5aa1ca9ab814c42c5f4fcf3cc535670524bd05a70b27adcc487e8cd5509a71",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "032",
+      "state": "published",
+      "version": "71f5d4bb65aff7e98a67468c5278efb2e8e382beee56322ef333313b11efb35d",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "033",
+      "state": "published",
+      "version": "ccf6b70c17b58f34219face9db86bb0255f773daee3fe00316e3f8e2bfb63849",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "034",
+      "state": "published",
+      "version": "081d8acf4c0bb4d00e516f3aad659abdbed83963cf4af7d71196d1392043e4ae",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "035",
+      "state": "published",
+      "version": "8c576e97ed86964560562a3b3af974ecef5d2205a5469559a4cd0f87a1b6359f",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "036",
+      "state": "published",
+      "version": "f187a735567415e9a451f1db22e3ebe6643090aa4cbcad93e66c1f2652830066",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "037",
+      "state": "published",
+      "version": "c3c5030e5a92a8f447550c494684a8e58c402e4ac796832780d031879c30bf52",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "038",
+      "state": "published",
+      "version": "185e53366685233edb83c2bcfee712a8a6d52763ba0edd7a60d95d94fc3333f8",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "039",
+      "state": "published",
+      "version": "8e033e6a601a2950bc272098b99e6dac7a964ff4d27c36508c4fb4980d886bdc",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "040",
+      "state": "published",
+      "version": "1127a2cab4eff188cbfe8b9a3ddd065a948984a3a458e400283f36bc8e593308",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "041",
+      "state": "published",
+      "version": "e949ccb9c365ab088b8d610354b4de75e71f98061a53fc179e6931cd178376bc",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "042",
+      "state": "published",
+      "version": "afea8e4739c456087a1f8ef7354ff70d415970fbbd4c7d84e7e83ad61e6ab918",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "043",
+      "state": "published",
+      "version": "68604ca6c2d5e687e0592c48447e0553ce5f499d370b00e70b98efe98d97b318",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "044",
+      "state": "published",
+      "version": "97b79c580d6f061fd9d3035c57669bf23fe528aa22fc5d89b73fbb41724c503a",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "045",
+      "state": "published",
+      "version": "21b48fb18b4049ef4d3b38056c5fdd4322ca79d0b775962c1b8559452b0d61a4",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "046",
+      "state": "published",
+      "version": "29851d783cfb256a6bc746b2cfa4960fb6e521d3829ac5173f48a86debfa05da",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "047",
+      "state": "published",
+      "version": "a90e501a6f47045cb67ea8092eff74204553ce9227bb06d4e99c93d975a1a866",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "048",
+      "state": "published",
+      "version": "86f0366657b845aacdb35e9e871b2bb50eeb05de28fe93f787ef09aaf8f375a5",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "049",
+      "state": "published",
+      "version": "04dd19169988b406d4986957472d68cd1f42c6d832efc3b51b08f5c11ef42bce",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
+      "review": "owner_authorized"
+    },
+    {
+      "id": "050",
+      "state": "published",
+      "version": "11007fe412192aa0b034812a1072dec7b6b0b3173417dd7ac94341aa9ab15208",
+      "at": "2026-11-05T12:27:48.937Z",
+      "actor": "Codex",
+      "note": "核查此前待核实的年代。补充可靠出处、约数与不同纪年，并分别记录生卒年和时间线定位依据。",
       "review": "owner_authorized"
     }
   ]

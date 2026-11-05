@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { era, extractMetadata, parseYears } from '../scripts/catalog.ts';
+import { chronologyYear, era, extractMetadata, parseYears } from '../scripts/catalog.ts';
 import { safeSource, mediaValid } from '../scripts/model.ts';
 import type { Article, Person } from '../scripts/model.ts';
-import { mediaPanel, renderArticleBody } from '../scripts/views.ts';
+import { mediaPanel, renderArticleBody, timeline } from '../scripts/views.ts';
 import { canRequestAd } from '../public/ad-policy.js';
 
 test('公元前、跨纪元、约数和未知独立处理', () => {
@@ -16,6 +16,26 @@ test('公元前、跨纪元、约数和未知独立处理', () => {
   assert.equal(extractMetadata('庄子是先秦道家人物。', '庄子', 'zhuangzi',
     '## 二、生平记事\n\n庄子约公元前369年至前286年，宋国蒙地人。').years.birth, -369);
   assert.equal(era(null), '年代待核实');
+});
+
+test('时间线采用活动期定位，未知项放在已知年代后', () => {
+  const people = [
+    { id: '001', name: '待核实', slug: 'unknown', years: parseYears('生卒不详') },
+    { id: '002', name: '活动期', slug: 'activity', years: {
+      birth: null, death: null, label: '约公元前7世纪活动', precision: 'period',
+      sortAnchor: { year: -700, kind: 'activity' },
+      sources: [{ title: '测试文献', url: 'https://example.org/', supports: '提供活动期' }],
+    } },
+    { id: '003', name: '公元前', slug: 'bce', years: parseYears('公元前10年至公元30年') },
+    { id: '004', name: '公元后', slug: 'ce', years: parseYears('100—170年') },
+  ] as Person[];
+  assert.equal(people[1].years.birth, null);
+  assert.equal(chronologyYear(people[1].years), -700);
+  const html = timeline(people);
+  assert.deepEqual([...html.matchAll(/data-timeline-id="(\d+)"/g)].map(row => row[1]), ['002', '003', '004', '001']);
+  assert.match(html, /data-unknown id="period-5"/);
+  assert.match(html, /activity\/#chronology/);
+  assert.doesNotMatch(timeline(people.slice(1)), /data-unknown|年代待核实/);
 });
 
 test('安全输入路径与 Markdown 防注入', () => {

@@ -75,12 +75,13 @@ const direction = get('[data-time-direction]');
 const timeline = get('[data-timeline]');
 if (direction && timeline) {
   const periods = Array.from(timeline.children);
-  const items = periods.map(period => Array.from(period.querySelector('ol').children));
+  const known = periods.filter(period => !period.hasAttribute('data-unknown'));
+  const unknown = periods.filter(period => period.hasAttribute('data-unknown'));
+  const items = known.map(period => Array.from(period.querySelector('ol').children));
   direction.addEventListener('change', () => {
     const desc = direction.value === 'desc';
-    const known = periods.slice(0, -1);
-    timeline.append(...(desc ? known.reverse() : known), periods.at(-1));
-    periods.forEach((period, i) => period.querySelector('ol').append(...(desc && i < periods.length - 1 ? [...items[i]].reverse() : items[i])));
+    timeline.append(...(desc ? [...known].reverse() : known), ...unknown);
+    known.forEach((period, i) => period.querySelector('ol').append(...(desc ? [...items[i]].reverse() : items[i])));
   });
 }
 

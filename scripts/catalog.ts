@@ -100,12 +100,16 @@ export function parseYears(opening: string): Years {
   };
 }
 
-export function era(birth: number | null): string {
-  if (birth === null) return '年代待核实';
-  if (birth < 0) return '公元前';
-  if (birth < 1000) return '1–999 年';
-  if (birth < 1500) return '1000–1499 年';
-  if (birth < 1800) return '1500–1799 年';
+export function chronologyYear(years: Years): number | null {
+  return years.birth ?? years.sortAnchor?.year ?? null;
+}
+
+export function era(year: number | null): string {
+  if (year === null) return '年代待核实';
+  if (year < 0) return '公元前';
+  if (year < 1000) return '1–999 年';
+  if (year < 1500) return '1000–1499 年';
+  if (year < 1800) return '1500–1799 年';
   return '1800 年以后';
 }
 

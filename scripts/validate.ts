@@ -1,7 +1,8 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { BASE, GALLERY, ROOT, SITE_URL, assetName, digest, edition, mediaValid } from './model.ts';
-import { articleRoute, personRoute } from './views.ts';
+import { articleRoute, e, external, personRoute } from './views.ts';
+import { chronologyYear } from './catalog.ts';
 
 const output = path.join(ROOT, 'dist');
 const catalogue = edition();
@@ -49,11 +50,36 @@ for (const [file, { markup }] of docs) {
 }
 check(new Set(people.map(person => person.id)).size === people.length, '人物 ID 必须唯一');
 check(new Set(people.map(person => person.slug)).size === people.length, '人物 slug 必须唯一');
+const timeline = docs.get('timeline/index.html')?.markup || '';
+const timelineRows = [...timeline.matchAll(/data-timeline-id="(\d{3})" data-timeline-year="(-?\d*)"/g)];
+const timelineYears = new Map(timelineRows.map(([, id, year]) => [id, year ? Number(year) : null]));
+check(timelineRows.length === people.length && timelineYears.size === people.length, '时间线人物数量或唯一性错误');
+let latestYear = -Infinity;
+for (const year of timelineYears.values()) {
+  const order = year ?? Infinity;
+  check(order >= latestYear, '时间线未按公元前后由早到晚排列');
+  latestYear = order;
+}
 for (const person of people) {
   const record = catalogue.records.findLast(entry => entry.id === person.id);
   check(record?.state === 'published' && record.version === digest(JSON.stringify(person)), '公开快照未对应发布记录 ' + person.id);
   check(person.articles.length === 2 && new Set(person.articles.map(article => article.kind)).size === 2, 'A/B 对应关系错误 ' + person.id);
   check(person.slug !== 'featured' && docs.has(personRoute(person) + 'index.html'), '人物路由错误 ' + person.id);
+  const { birth, death, sortAnchor, sources } = person.years;
+  check([birth, death, sortAnchor?.year ?? null].every(year => year === null || (Number.isInteger(year) && year !== 0)),
+    '年代数值无效 ' + person.id);
+  check((birth === null || death === null || birth <= death) && (!sortAnchor || birth === null), '生卒年与排序基准冲突 ' + person.id);
+  check(timelineYears.get(person.id) === chronologyYear(person.years), '时间线定位错误 ' + person.id);
+  if (sources?.length) {
+    const profile = docs.get(personRoute(person) + 'index.html');
+    check(profile?.anchors.has('chronology') && timeline.includes('href="' + BASE + personRoute(person) + '#chronology"'),
+      '缺少年代依据入口 ' + person.id);
+    for (const source of sources) {
+      const url = external(source.url);
+      check(url?.startsWith('https:') && source.supports.trim() && profile?.markup.includes('href="' + e(url) + '"'),
+        '年代出处缺失或无效 ' + person.id);
+    }
+  }
   check(mediaValid(person.media), '媒体配置错误 ' + person.id);
   for (const slot of GALLERY) {
     const items = person.assets.filter(asset => asset.slot === slot);
@@ -78,4 +104,6 @@ check(existsSync(path.join(output, '.nojekyll')), '缺少 .nojekyll');
 if (errors.length) { console.error(errors.slice(0, 40).join('\n')); throw new Error('校验失败 ' + errors.length + ' 项'); }
 console.log(JSON.stringify({ people: people.length, articles: people.reduce((n, p) => n + p.articles.length, 0),
   featured: people.filter(person => person.featured).length, pages: docs.size,
+  chronology: { positioned: [...timelineYears.values()].filter(year => year !== null).length,
+    sourced: people.filter(person => person.years.sources?.length).length },
   files: files.size, totalBytes, internalLinks: '通过', render: '正文在 HTML 内', assets: '通过' }, null, 2));

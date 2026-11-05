@@ -25,7 +25,11 @@ export interface Years {
   birth: number | null;
   death: number | null;
   label: string;
-  precision: 'source' | 'approximate' | 'unknown';
+  precision: 'source' | 'documented' | 'approximate' | 'disputed' | 'period' | 'unknown';
+  sortAnchor?: { year: number; kind: 'birth-range' | 'activity' | 'tradition' };
+  note?: string;
+  sources?: { title: string; url: string; supports: string }[];
+  checkedAt?: string;
 }
 export interface Source { title: string; url?: string; key: string }
 export interface Article {
